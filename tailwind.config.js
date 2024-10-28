@@ -8,7 +8,9 @@ module.exports = {
       colors: {
         softPrimary: '#84D187', 
         Primary: '#00B207', 
-        HardPrimary: '#2C742F', 
+        PrimaryHover: '#2C742F', 
+        HardPrimary: '#56AC59', 
+        HardPrimaryHover: '#2C742F', 
         Warning: '#FF8400',
         Danger: '#EA4B48',
         Gray90: '#1A1A1A',
@@ -31,6 +33,12 @@ module.exports = {
         greenGray20: '#B4CCB4',
         greenGray10: '#DAE5DA',
         greenGray05: '#EDF2EE',
+        textSuccess: '#00B207',
+        textBright: '#84D187',
+        textSuccessDark:'#2C742F',
+        textWaring: '#FF8A00',
+        textError: '#EA4B48',
+        textBlue: '#2388FF'
       },
     },
   },
