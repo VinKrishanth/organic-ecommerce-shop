@@ -6,7 +6,7 @@ function NormalButton({onClick ,minHight, minWidth, textSize, label}) {
   }
   return (
     <button 
-      className={`flex justify-center items-center   rounded-full  font-semibold leading-tight tracking-normal align-top  transition-all duration-300 ease-in-out delay-75 ${CustomerStyle.smBtnFull}`}
+      className={`flex justify-center items-center  rounded-full  font-semibold leading-tight tracking-normal align-top  transition-all duration-300 ease-in-out delay-75 ${CustomerStyle.smBtnFull}`}
       onClick={onClick}
     >
       {label}
