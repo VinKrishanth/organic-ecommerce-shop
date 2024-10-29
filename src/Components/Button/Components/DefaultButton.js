@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function DefaultButton({onClick, ButtonHover, Icon, HoverIcon, cardStyle}) {
+function DefaultButton({onClick, ButtonHover, Icon, HoverIcon, cardStyle, altText}) {
     const [textHover, setTextHover] = useState(false);  
     return (
         <button 
@@ -9,7 +9,7 @@ function DefaultButton({onClick, ButtonHover, Icon, HoverIcon, cardStyle}) {
             onMouseOver={()=>(setTextHover(true))}
             onMouseOut={()=>(setTextHover(false))}
         >
-            <img src={ (textHover && ButtonHover) ?  HoverIcon : Icon} alt='' className={`object-contain object-center`} />
+            <img src={ (textHover && ButtonHover) ?  HoverIcon : Icon} alt={altText} className={`object-contain object-center`} />
         </button>
     )
 }

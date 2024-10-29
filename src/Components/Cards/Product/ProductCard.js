@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import PropTypes from 'prop-types'; // Import PropTypes for validation
+import PropTypes from 'prop-types'; 
 import PriceText from '../../Text/PriceText';
 import CardButton from '../../../Components/Button/CardButton';
 import BagWhite from '../../../assets/Icons/bag-white.svg';
@@ -75,16 +75,16 @@ function ProductCard({ cardTitle, discountPrice, Price, offer, cardSourceAlt, ca
   );
 }
 
-// PropTypes for validation
-// ProductCard.propTypes = {
-//   cardTitle: PropTypes.string.isRequired,
-//   discountPrice: PropTypes.number.isRequired,
-//   Price: PropTypes.number.isRequired,
-//   offer: PropTypes.bool.isRequired,
-//   cardSourceAlt: PropTypes.string.isRequired,
-//   cardSourceURL: PropTypes.string.isRequired,
-//   btnLabel: PropTypes.string,
-//   viewRate: PropTypes.number.isRequired,
-// };
+
+ProductCard.propTypes = {
+  cardTitle: PropTypes.string.isRequired,
+  discountPrice: PropTypes.number.isRequired,
+  Price: PropTypes.number.isRequired,
+  offer: PropTypes.bool.isRequired,
+  cardSourceAlt: PropTypes.string.isRequired,
+  cardSourceURL: PropTypes.string.isRequired,
+  btnLabel: PropTypes.string,
+  viewRate: PropTypes.number.isRequired,
+};
 
 export default ProductCard;
