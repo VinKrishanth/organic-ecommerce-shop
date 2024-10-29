@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import CloseNormal from '../../assets/Icons/close-hover.svg'
 import CloseHOver from '../../assets/Icons/close-normal.svg'
 
+
 function CloseButton({onClick, btnStyle}) {
     const [textHover, setTextHover] = useState(false);
       return (

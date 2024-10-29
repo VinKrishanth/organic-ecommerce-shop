@@ -9,7 +9,6 @@ function BigOffer() {
     mins: '00',
     secs: '00',
   });
-
   const targetDate = new Date('10/31/2024 04:58 AM');
 
   useEffect(() => {

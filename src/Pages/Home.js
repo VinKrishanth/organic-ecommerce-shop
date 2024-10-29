@@ -1,10 +1,12 @@
 import React from 'react'
 import Header from '../Containers/Header'
 // import NormalButton from '../Components/Cards/Product/ProductCard'
-import NormalButtonX from '../Components/Cards/Team/TeamCards'
+import Blogs from '../Components/Cards/Blog/Blogs'
 // import NormalButton from '../Components/Cards/BIG/ProductBig'
 import X from '../assets/Product/apple.svg'
-import teamMember from '../assets/Product/team-image.svg'
+import Y from '../assets/Product/blog-source.svg'
+
+
 function Home() {
   return (
     <>
@@ -21,10 +23,10 @@ function Home() {
         cardTitle={`Sri Lanka Apple`}
         productID={3}
       /> */}
-      <NormalButtonX 
-        memberJob={`Ceo & Founder`}
-        memberName={`Jenny Wilson`}
-        sourceURL={teamMember}
+      <Blogs 
+        blogSource= {Y}
+        blogSourceURL= {`/`}
+        blogTitle= {`Curabitur porttitor orci eget neque accumsan venenatis. Nunc fermentum.`}
       />
     </>
   )

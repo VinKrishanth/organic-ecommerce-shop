@@ -19,3 +19,13 @@ export const calculateTimeLeft = (targetDate) => {
     }
 };
   
+
+export const currentDateAndMonth = () => {
+  const now = new Date();
+  const day = now.getDate();
+
+  return {
+    day: day < 10 ? `0${day}` : day,
+    month: String(now).slice(3, 7).toUpperCase()
+  }
+}
