@@ -4,7 +4,7 @@ function SocialMediaButton({onClick, Icon, HoverIcon, btnBG, btnBGHover }) {
     const [textHover, setTextHover] = useState(false);  
     return (
         <button 
-            className={`flex justify-center items-center transition-all duration-300 ease-in-out delay-75 min-h-10 min-w-10 rounded-full border-2  ${textHover  ? btnBGHover : btnBG} `}
+            className={`flex justify-center items-center transition-all duration-500 ease-linear delay-75 min-h-10 min-w-10 rounded-full hover:scale-105    ${textHover  ? btnBGHover : btnBG} `}
             onClick={onClick}
             onMouseOver={()=>(setTextHover(true))}
             onMouseOut={()=>(setTextHover(false))}

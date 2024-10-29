@@ -1,7 +1,7 @@
 import React from 'react'
 import StarItems  from '../Components/StarItems.js'
 
-function Star({starCount, starStyle}) {
+function Star({starCount, starStyle, viewCount}) {
   return (
     <div className={`flex justify-start ${starStyle}`}>
         {
@@ -13,7 +13,9 @@ function Star({starCount, starStyle}) {
                             <li key={index} className='min-h-3 min-w-3'><img src={item.SourceURL} alt={item.SourceURL} className='object-cover object-center' /></li>
                         )})
                     }
+                    {viewCount && <p className='text-xs font-normal leading-4 align-top tracking-normal text-left text-Gray50 pl-2'> {`(${viewCount} Feedback)`}</p>}
                 </ul>
+                
             )
         }
         {
@@ -25,6 +27,7 @@ function Star({starCount, starStyle}) {
                             <li key={index} className='min-h-3 min-w-3'><img src={item.SourceURL} alt={item.SourceURL} className='object-cover object-center' /></li>
                         )})
                     }
+                    {viewCount && <p className='text-xs font-normal leading-4 align-top tracking-normal text-left text-Gray50 pl-2'> {`(${viewCount} Feedback)`}</p>}
                 </ul>
             )
         }
@@ -37,6 +40,7 @@ function Star({starCount, starStyle}) {
                             <li key={index} className='min-h-3 min-w-3'><img src={item.SourceURL} alt={item.SourceURL} className='object-cover object-center' /></li>
                         )})
                     }
+                    {viewCount && <p className='text-xs font-normal leading-4 align-top tracking-normal text-left text-Gray50 pl-2'> {`(${viewCount} Feedback)`}</p>}
                 </ul>
             )
         }
@@ -49,6 +53,7 @@ function Star({starCount, starStyle}) {
                             <li key={index} className='min-h-3 min-w-3'><img src={item.SourceURL} alt={item.SourceURL} className='object-cover object-center' /></li>
                         )})
                     }
+                    {viewCount && <p className='text-xs font-normal leading-4 align-top tracking-normal text-left text-Gray50 pl-2'> {`(${viewCount} Feedback)`}</p>}
                 </ul>
             )
         }
@@ -61,6 +66,7 @@ function Star({starCount, starStyle}) {
                             <li key={index} className='min-h-3 min-w-3'><img src={item.SourceURL} alt={item.SourceURL} className='object-cover object-center' /></li>
                         )})
                     }
+                    {viewCount && <p className='text-xs font-normal leading-4 align-top tracking-normal text-left text-Gray50 pl-2'> {`(${viewCount} Feedback)`}</p>}
                 </ul>
             )
         }

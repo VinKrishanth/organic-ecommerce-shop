@@ -13,27 +13,32 @@ const SocialMedia = [
     {
         Name: 'The FaceBook Icon', 
         SourceURL: facebook,
-        SourceHoverURL: facebookHover
+        SourceHoverURL: facebookHover,
+        available: true
     },
     {
         Name: 'The Twitter Icon', 
         SourceURL: twitter,
-        SourceHoverURL: twitterHover
+        SourceHoverURL: twitterHover,
+        available: true
     },
     {
         Name: 'The Pinterest Icon', 
         SourceURL: pinterest,
-        SourceHoverURL: pinterestHover
+        SourceHoverURL: pinterestHover,
+        available: true
     },
     {
         Name: 'The instagram Icon', 
         SourceURL: instagram,
-        SourceHoverURL: instagramHover
+        SourceHoverURL: instagramHover,
+        available: true
     },
     {
         Name: 'The Link Icon', 
         SourceURL: Link,
-        SourceHoverURL: LinkHover
+        SourceHoverURL: LinkHover,
+        available: false
     },
 ]
 export default SocialMedia
