@@ -16,7 +16,7 @@ function TagsButton({Type, onClick , tagStyle, label}) {
 
         {   Type === 'New' &&  
             <TagButton 
-              label={'New'}
+              label={label}
               onClick={onClick}
               textBackground={'bg-textWaring'}
               tagStyle={tagStyle}

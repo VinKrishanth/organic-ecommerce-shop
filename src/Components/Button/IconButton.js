@@ -2,7 +2,7 @@ import React from 'react'
 import PropType from 'prop-types'
 import { useNavigate } from 'react-router-dom'
 
-function IconButton({sourceIcon, title, navigationURL}) {
+function IconButton({sourceIcon, title, navigationURL, btnStyle}) {
   const navigate = useNavigate();
   const handleReadMoreButton = () =>{
     navigate(navigationURL);
@@ -10,7 +10,7 @@ function IconButton({sourceIcon, title, navigationURL}) {
   
   return (
     <button 
-        className={'flex justify-center items-center min-h-5 gap-2 text-base leading-5 tracking-normal font-semibold align-top opacity-100 text-Primary hover:opacity-70 transition-all duration-500 ease-linear'}
+        className={`flex items-center min-h-5 gap-2 text-base leading-5 tracking-normal font-semibold align-top opacity-100 hover:opacity-70 transition-all duration-500 ease-linear ${btnStyle ? btnStyle : 'text-Primary justify-center '}`}
         onClick={handleReadMoreButton}
     >
         {title}

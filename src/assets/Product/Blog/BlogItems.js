@@ -4,6 +4,8 @@ import user from './user_normal.svg'
 import userHover from './user_green.svg'
 import chat from './chat-normal.svg'
 import chatHover from './chat-green.svg'
+import ArrowRightSource from './arrow-right-green.svg'
+import ArrowRightGreenSource from './arrow-right.svg'
 
 const BlogItems = [
     {
@@ -32,3 +34,6 @@ const BlogItems = [
 ]
 
 export default BlogItems
+
+export const ArrowRight = ArrowRightSource
+export const ArrowRightGreen = ArrowRightGreenSource
