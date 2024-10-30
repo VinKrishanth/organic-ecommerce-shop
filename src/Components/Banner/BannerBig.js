@@ -30,7 +30,7 @@ function BannerBig({navigationURL}) {
                   sourceIcon ={ArrowRightGreen}
                   title={`Shop now`}
                   navigationURL = {navigationURL}
-                  btnStyle= {`bg-white text-Primary max-w-[191px] min-h-[51px] rounded-full`}
+                  btnStyle= {`bg-white text-Primary max-w-[191px] min-h-[51px] rounded-full justify-center`}
                 />
             </div>
         </div>
