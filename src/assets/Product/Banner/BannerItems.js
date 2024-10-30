@@ -9,6 +9,9 @@ import bannerOfferSource from './banner-sale.svg'
 import bannerFruitSource from './banner-fruit.svg'
 import bannerMeatSource from './banner-meat.svg'
 import bannerVegetableSourceXS from './banner-vegetable.svg'
+import bannerBreakFastSource from './banner-break-fast.svg'
+import bannerWaterDrinkSource from './banner-water-drink.svg'
+import bannerCowMilkSource from './banner-cow-milk.svg'
 
 export const chicken = chickenSource
 export const freshMilk = freshMilkSource
@@ -20,4 +23,7 @@ export const bannerSale = bannerSaleSource
 export const bannerOffer = bannerOfferSource
 export const bannerVegetableXS = bannerVegetableSourceXS
 export const bannerFruit = bannerFruitSource
+export const bannerBreakFast = bannerBreakFastSource
 export const bannerMeat = bannerMeatSource
+export const bannerWaterDrink = bannerWaterDrinkSource
+export const bannerCowMilk = bannerCowMilkSource
