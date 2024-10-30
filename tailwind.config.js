@@ -38,7 +38,8 @@ module.exports = {
         textSuccessDark:'#2C742F',
         textWaring: '#FF8A00',
         textError: '#EA4B48',
-        textBlue: '#2388FF'
+        textBlue: '#2388FF',
+        textYellow: '#FCC900'
       },
     },
   },

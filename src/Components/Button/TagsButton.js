@@ -34,7 +34,7 @@ function TagsButton({Type, onClick , tagStyle, label}) {
 
         {   Type === 'Stock' &&  
             <TagButton 
-                label={'Out of Stack'}
+                label={label}
                 onClick={onClick}
                 textBackground={'bg-Gray90'}
                 tagStyle={tagStyle}

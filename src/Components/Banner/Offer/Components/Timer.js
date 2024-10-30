@@ -1,5 +1,4 @@
 import React from 'react'
-import { redirectDocument } from 'react-router-dom'
 
 function Timer({timeValue, timeDescription, dotValue}) {
   return (
