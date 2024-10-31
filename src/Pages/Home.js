@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../Containers/Header'
-import Feature from '../Components/Feature/Feature'
+import NavigationMenu from '../Components/Navigation/Menu/NavigationMenu'
 
 
 function Home() {
@@ -10,8 +10,7 @@ function Home() {
         toggleMenu={true}
       />
 
-      <Feature 
-      />
+      <NavigationMenu />
     </>
   )
 }
