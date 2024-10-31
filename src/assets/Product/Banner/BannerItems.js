@@ -14,6 +14,7 @@ import bannerWaterDrinkSource from './banner-water-drink.svg'
 import bannerCowMilkSource from './banner-cow-milk.svg'
 import bannerBestDealLeftSource from './banner-best-deal-left.svg'
 import bannerBestDealRightSource from './banner-best-deal-right.svg'
+import bannerSaleMonthSource from './banner-sale-month.svg'
 
 export const chicken = chickenSource
 export const freshMilk = freshMilkSource
@@ -31,3 +32,4 @@ export const bannerWaterDrink = bannerWaterDrinkSource
 export const bannerCowMilk = bannerCowMilkSource
 export const bannerBestDealLeft = bannerBestDealLeftSource
 export const bannerBestDealRight = bannerBestDealRightSource
+export const bannerSaleMonth = bannerSaleMonthSource
