@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../Containers/Header'
-import BestDeal from '../Components/Banner/Best/BestDealXS.js'
-import {bannerSaleMonth} from '../assets/Product/Banner/BannerItems.js'
+import Feature from '../Components/Feature/Feature'
+
 
 function Home() {
   return (
@@ -10,8 +10,7 @@ function Home() {
         toggleMenu={true}
       />
 
-      <BestDeal 
-        bannerSource={bannerSaleMonth}
+      <Feature 
       />
     </>
   )

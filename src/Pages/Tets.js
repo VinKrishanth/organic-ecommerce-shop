@@ -9,6 +9,7 @@ import {bannerOffer, bannerSale} from '../assets/Product/Banner/BannerItems.js'
 import {bannerMeat, bannerFruit, bannerVegetableXS} from '../assets/Product/Banner/BannerItems.js'
 import {bannerCowMilk, bannerWaterDrink, bannerBreakFast} from '../assets/Product/Banner/BannerItems.js'
 import {bannerBestDealLeft , bannerBestDealRight} from '../assets/Product/Banner/BannerItems.js'
+import {bannerSaleMonth} from '../assets/Product/Banner/BannerItems.js'
 
 function Tets() {
     return (
@@ -117,6 +118,10 @@ function Tets() {
         bannerTitleDown={`Deal of the Month`}
         bannerTitleUp={`Our Special Products`}
         navigationURL={``}
+      />
+
+      <BestDeal 
+        bannerSource={bannerSaleMonth}
       />
         </>
       )
