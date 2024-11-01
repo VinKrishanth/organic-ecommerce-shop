@@ -1,9 +1,13 @@
 import React from 'react'
+import Header from '../../Containers/Header'
+import Footer from '../../Containers/Footer'
 
 function Fish() {
   return (
-    <div>Fish</div>
+    <>
+      <Header />
+      <Footer />
+    </>
   )
 }
-
 export default Fish

@@ -29,3 +29,8 @@ export const currentDateAndMonth = () => {
     month: String(now).slice(3, 7).toUpperCase()
   }
 }
+
+export const currentYear = () => {
+  const now =  new Date();
+  return {currentYear : now.getFullYear()}
+}

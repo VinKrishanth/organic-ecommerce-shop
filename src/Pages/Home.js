@@ -1,16 +1,13 @@
 import React from 'react'
 import Header from '../Containers/Header'
-import NavigationMenu from '../Components/Navigation/Menu/NavigationMenu'
-
+import Footer from '../Containers/Footer'
 
 function Home() {
   return (
     <>
-      <Header 
-        toggleMenu={true}
-      />
+      <Header />
 
-      <NavigationMenu />
+      <Footer />
     </>
   )
 }

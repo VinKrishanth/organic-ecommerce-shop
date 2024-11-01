@@ -7,3 +7,4 @@ export { default as IceCream } from './IceCream';
 export { default as Bread } from './Bread';
 export { default as Butter } from './Butter';
 export { default as Cooking } from './Cooking';
+export { default as TrackOrder } from './TrackOrder';

@@ -1,9 +1,13 @@
 import React from 'react'
+import Header from '../../Containers/Header'
+import Footer from '../../Containers/Footer'
 
 function Vegetables() {
   return (
-    <div>Vegetables</div>
+    <>
+      <Header />
+      <Footer />
+    </>
   )
 }
-
 export default Vegetables

@@ -1,8 +1,13 @@
 import React from 'react'
+import Header from '../../Containers/Header'
+import Footer from '../../Containers/Footer'
 
 function Meat() {
   return (
-    <div>Meat</div>
+    <>
+      <Header />
+      <Footer />
+    </>
   )
 }
 

@@ -1,8 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import { Home, Shop, Blog, Pages, About, Contact } from '../Pages';
-import { Fruit, Vegetables, Fish, Meat, Drink, IceCream, Bread, Butter, Cooking } from '../Pages/Categories';
+import { Home, Shop, Blog, Pages, About, Contact, Product } from '../Pages';
+import { Fruit, Vegetables, Fish, Meat, Drink, IceCream, Bread, Butter, Cooking ,TrackOrder} from '../Pages/Categories';
+import {BeautyAndHealth , BreadAndBakery, FruitVegetable, MeatAndFish} from '../Pages/shops'
+import {Cart, MyAccount, OrderHistory, Wishlist} from '../Pages/Account'
+import {Faqs, Policy, Terms} from '../Pages/Helps'
 
 function Layouts() {
   return (
@@ -14,8 +17,9 @@ function Layouts() {
         <Route path="/organic-ecommerce-shop/pages" element={<Pages />} />
         <Route path="/organic-ecommerce-shop/about" element={<About />} />
         <Route path="/organic-ecommerce-shop/contact" element={<Contact />} />
+        <Route path="/organic-ecommerce-shop/product" element={<Product />} />
 
-        {/* Directly place category routes here */}
+        
         <Route path="/organic-ecommerce-shop/categories/fresh-fruit" element={<Fruit />} />
         <Route path="/organic-ecommerce-shop/categories/vegetables" element={<Vegetables />} />
         <Route path="/organic-ecommerce-shop/categories/river-fish" element={<Fish />} />
@@ -25,6 +29,23 @@ function Layouts() {
         <Route path="/organic-ecommerce-shop/categories/cake-and-bread" element={<Bread />} />
         <Route path="/organic-ecommerce-shop/categories/butter-cream" element={<Butter />} />
         <Route path="/organic-ecommerce-shop/categories/cooking" element={<Cooking />} />
+        <Route path="/organic-ecommerce-shop/categories/track-order" element={<TrackOrder />} />
+
+        <Route path="/organic-ecommerce-shop/beauty-and-health" element={<BeautyAndHealth />} />
+        <Route path="/organic-ecommerce-shop/bread-and-bakery" element={<BreadAndBakery />} />
+        <Route path="/organic-ecommerce-shop/fruit-vegetable" element={<FruitVegetable />} />
+        <Route path="/organic-ecommerce-shop/meat-and-fish" element={<MeatAndFish />} />
+
+        <Route path="/organic-ecommerce-shop/my-account" element={<MyAccount />} />
+        <Route path="/organic-ecommerce-shop/my-account/order-history" element={<OrderHistory />} />
+        <Route path="/organic-ecommerce-shop/my-account/shopping-cart" element={<Cart />} />
+        <Route path="/organic-ecommerce-shop/my-account/wishlist" element={<Wishlist />} />
+
+        <Route path="/organic-ecommerce-shop/helps/faqs" element={<Faqs />} />
+        <Route path="/organic-ecommerce-shop/helps/terms-and-condition" element={<Terms />} />
+        <Route path="/organic-ecommerce-shop/helps/privacy-policy" element={<Policy />} />
+
+
       </Routes>
     </Router>
   );

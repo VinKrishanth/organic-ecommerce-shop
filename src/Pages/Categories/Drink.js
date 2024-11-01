@@ -1,8 +1,13 @@
 import React from 'react'
+import Header from '../../Containers/Header'
+import Footer from '../../Containers/Footer'
 
 function Drink() {
   return (
-    <div>Drink</div>
+    <>
+      <Header />
+      <Footer />
+    </>
   )
 }
 

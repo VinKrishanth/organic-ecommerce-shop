@@ -15,7 +15,7 @@ function Navigation({toggleMenu}) {
   
     return (
       <UserContext.Provider  value={{deviceSize, setDeviceSize}}>
-        <div className={`w-screen text-Gray60`}>
+        <div className={`w-screen text-Gray60 hidden`}>
           <section className={`flex flex-col`}>
             <TopHeader />
             <MainHeader 
