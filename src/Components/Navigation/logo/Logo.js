@@ -1,9 +1,9 @@
 import React from 'react'
 import LogoP from '../../../assets/Header/plant-logo.svg'
 
-function Logo({textColor}) {
+function Logo({textColor , deviceSize}) {
   return (
-    <div className={`flex gap-2 justify-center items-center`}>
+    <div className={`flex gap-2 ${deviceSize? '' : 'justify-center items-center '}`}>
         <figure className={``}>
             <img src={LogoP} alt='3legant Logo' className={`object-cover object-center min-w-8 min-h-8 cursor-pointer`} />
         </figure>

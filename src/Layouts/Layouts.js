@@ -6,10 +6,12 @@ import { Fruit, Vegetables, Fish, Meat, Drink, IceCream, Bread, Butter, Cooking 
 import {BeautyAndHealth , BreadAndBakery, FruitVegetable, MeatAndFish} from '../Pages/shops'
 import {Cart, MyAccount, OrderHistory, Wishlist} from '../Pages/Account'
 import {Faqs, Policy, Terms} from '../Pages/Helps'
+import NewsLetter from '../Components/popup/NewsLetter';
 
 function Layouts() {
   return (
     <Router>
+      <NewsLetter />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/organic-ecommerce-shop/shop" element={<Shop />} />

@@ -6,7 +6,6 @@ import CustomerStyle from '../../Style/CustomerStyle'
 export default function Menu({deviceSize}) {
   let toggleMenu = JSON.parse(localStorage.getItem('ToggleMenu'));
   const [textMenu , setTextMenu] = useState(toggleMenu);
-  const [textHover, setTextHover] = useState(false);
 
   const handleMenuClick = () => {
     textMenu ? setTextMenu(false) :  setTextMenu(true) 

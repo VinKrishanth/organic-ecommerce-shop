@@ -6,12 +6,12 @@ import {handleFooterSocialMediaBtn} from '../../../Components/Js/commonButtonFun
 
 function TopFooter() {
   return (
-    <div className={`min-w-full flex justify-between items-center  px-[300px] min-h[162px]  py-8 gap-16`}>
+    <div className={`flex flex-row gap-16 justify-between items-center 2xl:py-20 2xl:px-72`}>
       <div className={`flex justify-start flex-col min-h-full`}>
           <h1 className={`text-lg leading-6 align-top font-semibold hover:translate-x-3 transition-all duration-700 ease-linear delay-100 cursor-pointer`}>Subcribe our Newsletter</h1>
-          <p className={`text-sm leading-6 align-top font-normal hover:translate-x-3 transition-all duration-700 ease-linear delay-100 max-w-[400px] text-Gray40 cursor-pointer`}>Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna.</p>
+          <p className={`text-sm leading-6 align-top font-normal hover:translate-x-3 transition-all duration-700 ease-linear delay-100  text-Gray40 cursor-pointer `}>Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna.</p>
       </div>
-      <div className={`flex-grow flex justify-center items-center gap-8`}>
+      <div className={`flex-grow flex  flex-row justify-center items-center gap-8`}>
          <TextInputButton />
          <ul className={`flex justify-center items-center gap-4`}>
             {

@@ -15,9 +15,9 @@ function Footers() {
 
   return (
     <UserContext.Provider value={{deviceSize, setDeviceSize}}>
-        <div className={`flex flex-col justify-between items-start w-screen`}>
-            <TopFooter />
-            <FooterMain />
+        <div className={`flex flex-col justify-between items-start  ${deviceSize ? 'min-w-full overflow-hidden ' : 'min-w-screen'}`}>
+            <TopFooter deviceSize = {deviceSize} />
+            <FooterMain deviceSize = {deviceSize} />
         </div>
     </UserContext.Provider>
   )

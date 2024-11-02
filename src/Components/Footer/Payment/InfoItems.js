@@ -31,22 +31,22 @@ const InfoItems  = [
         Title: 'Helps',
         Pages: [
             {
-                ID: 1,
+                ID: 5,
                 pageTitle: 'Contact',
                 sourceURL: `${pathMain}contact`,
             },
             {
-                ID: 2,
+                ID: 6,
                 pageTitle: 'Faqs',
                 sourceURL: `${pathMain}helps/faqs`,
             },
             {
-                ID: 3,
+                ID: 7,
                 pageTitle: 'Teems & Condition',
                 sourceURL: `${pathMain}helps/terms-and-condition`,
             },
             {
-                ID: 4,
+                ID: 8,
                 pageTitle: 'Privacy Policy',
                 sourceURL: `${pathMain}helps/privacy-policy`,
             },
@@ -56,22 +56,22 @@ const InfoItems  = [
         Title: 'Proxy',
         Pages: [
             {
-                ID: 1,
+                ID: 9,
                 pageTitle: 'About',
                 sourceURL: `${pathMain}about`,
             },
             {
-                ID: 2,
+                ID: 10,
                 pageTitle: 'Shop',
                 sourceURL: `${pathMain}shop`,
             },
             {
-                ID: 3,
+                ID: 11,
                 pageTitle: 'Product',
                 sourceURL: `${pathMain}product`,
             },
             {
-                ID: 4,
+                ID: 12,
                 pageTitle: 'Track Order',
                 sourceURL: `${pathMain}categories/track-order`,
             },
@@ -81,22 +81,22 @@ const InfoItems  = [
         Title: 'Categories',
         Pages: [
             {
-                ID: 1,               
+                ID: 13,               
                 pageTitle: 'Fruit & Vegetables',
                 sourceURL: `${pathMain}fruit-vegetable`,
             },
             {
-                ID: 2,
+                ID: 14,
                 pageTitle: 'Meat & Fish',
                 sourceURL: `${pathMain}meat-and-fish`,
             },
             {
-                ID: 3,
+                ID: 15,
                 pageTitle: 'Bread & Bakery',
                 sourceURL: `${pathMain}bread-and-bakery`,
             },
             {
-                ID: 4,
+                ID: 16,
                 pageTitle: 'Beauty & Health',
                 sourceURL: `${pathMain}beauty-and-health`,
             },
