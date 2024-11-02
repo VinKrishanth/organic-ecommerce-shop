@@ -19,3 +19,9 @@ export const handleFooterSocialMediaBtn = (text) => {
   console.log(`click ..! ${text}`)
 }
 
+export const handleClosePopup = () => {
+  const newLetter = document.getElementById('newLetter');
+  newLetter.style.display = 'none';
+  console.log(`click pop-pup..! `)
+}
+

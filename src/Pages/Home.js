@@ -1,15 +1,13 @@
 import React from 'react'
 import Header from '../Containers/Header'
 import Footer from '../Containers/Footer'
-import NewsLetter from '../Components/popup/NewsLetter'
 
 function Home() {
   return (
-    <>
+    <div>
       <Header />
-      
       <Footer />
-    </>
+    </div>
   )
 }
 
