@@ -29,13 +29,12 @@ function NewsLetter() {
             <img src={PopPupSource} alt='The New letter pop-pop' className={`object-cover object-center`} />
           </figure>  
           <div className={`flex-grow m flex flex-col justify-center items-center gap-8  py-8  relative`}>
-            <h1 className={`text-5xl text-center  tracking-normal font-semibold align-top max-w-[70%] `}>Subcribe to Our Newsletter</h1>
-            <p className={`text-lg font-normal tracking-normal leading-6 text-center align-top text-Gray40 max-w-[70%]`}>Subscribe to our newlletter and Save your <span className='text-Warning'>20% money</span> with discount code today.</p>
+            <h1 className={`2xl:text-4xl text-3xl text-center  tracking-normal font-semibold align-top max-w-[70%] `}>Subcribe to Our Newsletter</h1>
+            <p className={`2xl:text-base text-sm font-normal tracking-normal leading-6 text-center align-top text-Gray40 max-w-[70%]`}>Subscribe to our newlletter and Save your <span className='text-Warning'>20% money</span> with discount code today.</p>
             <div className={`px-32 min-w-full`}>
-                 <TextInputButton 
-                 />
+                 <TextInputButton />
             </div>
-            <div className={`flex justify-center items-center gap-4`}>
+            <div className={`flex justify-center items-center gap-4 xl:scale-100 md:scale-90`}>
                 <input type='checkbox' name='' className={``} />
                 <label className={`text-sm font-normal tracking-normal leading-6 text-left align-top text-Gray60`}>Do not show this window</label>
             </div>
