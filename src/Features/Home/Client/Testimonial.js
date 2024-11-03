@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ReviewInfo from './components/ReviewInfo.js'
 import TestimonialPage from '../../../Components/Account/Team/Testimonial'
+import MainCenter from '../../../Components/Title/MainCenter'
 
 function Testimonial() {
     const [deviceSize, setDeviceSize] = useState(window.innerWidth <= 768);
@@ -14,14 +15,19 @@ function Testimonial() {
     const customerStyle = {
         container: '',
         dxl: '2xl:px-32 2xl:-16',
-        xl: 'xl:py-16',
+        xl: '',
         lg: 'lg:min-w-screen ',
         md: 'md:py-10 ',
         sm:' sm:px-16 sm:py-10  ',
         base: 'min-w-full p-10'
     }
   return (
-    <section className={`${customerStyle.container} ${customerStyle.dxl} ${customerStyle.xl} ${customerStyle.lg} ${customerStyle.md} ${customerStyle.sm} ${customerStyle.base} `}>
+    <section className={`${deviceSize ? 'min-w-full' : 'min-w-screen bg-Gray05'}`}>
+      <div className={`${customerStyle.container} ${customerStyle.dxl} ${customerStyle.xl} ${customerStyle.lg} ${customerStyle.md} ${customerStyle.sm} ${customerStyle.base} `}>
+        <MainCenter 
+          Subtitle={`Client Testiomial`}
+          Title={`What our Client Says`}
+        />
         <div className={`grid xl:grid-cols-3 sm:grid-cols-2  grid-cols-1 xl:gap-12 gap-8`}>
         {
            ReviewInfo.map((review, index) => {
@@ -39,6 +45,7 @@ function Testimonial() {
            })
         }
         </div>
+    </div>
     </section>
   )
 }

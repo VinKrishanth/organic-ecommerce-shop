@@ -23,7 +23,7 @@ function ProductCard({ cardTitle, discountPrice, Price, offer, cardSourceAlt, ca
 
   return (
     <div 
-      className={`max-w-[264px] min-h-[327px] m-8 border-[1px] shadow-md rounded relative transition-all duration-500 ease-linear delay-75 ${textHover ? 'border-sky-300' : 'border-white'} overflow-hidden`}
+      className={`min-w-full min-h-full border-2 relative transition-all duration-500 ease-linear delay-75 ${textHover ? 'border-Primary shadow-Primary' : 'border-Gray05'} overflow-hidden`}
       onMouseOut={() => setTextHover(false)}
       onMouseOver={() => setTextHover(true)}
       id={productID}
@@ -36,24 +36,28 @@ function ProductCard({ cardTitle, discountPrice, Price, offer, cardSourceAlt, ca
           label={btnLabel}
         />
       )}
-      <div className='flex flex-col absolute right-0 top-0 z-20 py-2 px-4'>
-        <WishlistButton 
-          btnStyle="scale-75 m-0 hover:translate-y-2 transition-all duration-500 ease-linear"
-          onClick={handleClickWishlist}
-        />
-        <QuickViewButton 
-          ButtonHover={true}
-          HoverIcon={QuickIcon}
-          Icon={QuickIconHover}
-          cardStyle="scale-75 m-0 hover:translate-y-2 transition-all duration-500 ease-linear"
-          onClick={handleClickQuickView}
-        />
-      </div>
+      {
+        textHover && (
+          <div className='flex flex-col absolute right-0 top-0 z-20 py-2 px-4'>
+            <WishlistButton 
+              btnStyle="scale-75 m-0 hover:translate-y-2 transition-all duration-500 ease-linear"
+              onClick={handleClickWishlist}
+            />
+            <QuickViewButton 
+              ButtonHover={true}
+              HoverIcon={QuickIcon}
+              Icon={QuickIconHover}
+              cardStyle="scale-75 m-0 hover:translate-y-2 transition-all duration-500 ease-linear"
+              onClick={handleClickQuickView}
+            />
+          </div>
+        )
+      }
       <figure className='flex justify-center items-center min-w-full cursor-pointer hover:scale-105 transition-all duration-500 ease-linear'>
         <img src={cardSourceURL} alt={cardSourceAlt} className='object-cover object-center' />
       </figure>
       <div className='relative p-4'>
-        <h1 className='text-sm leading-5 tracking-normal font-normal text-left align-top cursor-pointer'>{cardTitle}</h1>
+        <h1 className={`text-sm leading-5 tracking-normal font-normal text-left align-top cursor-pointer ${textHover && 'text-Primary'}`}>{cardTitle}</h1>
         <PriceText 
           Price={Price}
           discountPrice={discountPrice}
@@ -62,6 +66,7 @@ function ProductCard({ cardTitle, discountPrice, Price, offer, cardSourceAlt, ca
         <Stars 
           starCount={viewRate}
           starStyle='scale-105 pl-1 hover:translate-x-2 transition-all duration-500 ease-linear'
+          starSize={true}
         />
         <CardButton 
           ButtonHover={true}
@@ -78,12 +83,10 @@ function ProductCard({ cardTitle, discountPrice, Price, offer, cardSourceAlt, ca
 
 ProductCard.propTypes = {
   cardTitle: PropTypes.string.isRequired,
-  discountPrice: PropTypes.number.isRequired,
   Price: PropTypes.number.isRequired,
   offer: PropTypes.bool.isRequired,
   cardSourceAlt: PropTypes.string.isRequired,
   cardSourceURL: PropTypes.string.isRequired,
-  btnLabel: PropTypes.string,
   viewRate: PropTypes.number.isRequired,
 };
 

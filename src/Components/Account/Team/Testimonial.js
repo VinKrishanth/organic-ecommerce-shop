@@ -6,7 +6,7 @@ function Testimonial({reviewerName, reviewerJob, sourceURL , reviewDescription})
     const [textHover, setTextHover] = useState(false);
   return (
     <div 
-        className={`flex flex-col justify-start items-start gap-8 p-8 border-2 max-w-[384px]  min-h-[254px] text-gray-700 relative hover:border-sky-500  hover:-translate-x-2 hover:scale-95 transition-all duration-700 delay-300 ease-linear `}
+        className={`flex flex-col justify-start items-start gap-8 p-8 border-2 max-w-[384px]  min-h-[254px] text-gray-700 relative hover:border-sky-500  hover:-translate-x-2 hover:scale-95 transition-all duration-700 delay-300 ease-linear bg-white`}
         onMouseOver={()=>{setTextHover(true)}}
         onMouseOut={()=>{setTextHover(false)}}
     >

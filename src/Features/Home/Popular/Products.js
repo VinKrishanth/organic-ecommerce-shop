@@ -1,9 +1,9 @@
 import React, {  useEffect, useState } from 'react'
-import PopularCart from '../../../Components/Cards/Category/PopularCart'
-import CategoryItems from './Components/CategoryItems'
 import MainTitle from '../../../Components/Title/MainTitle';
+import  ProductItems from './Components/ProductItems.js'
+import ProductCard from '../../../Components/Cards/Product/ProductCard.js'
 
-function Category() {
+function Products() {
     const [deviceSize, setDeviceSize] = useState(window.innerWidth <= 768);
     
     useEffect(() => {
@@ -25,18 +25,24 @@ function Category() {
   return (
     <section className={`${customerStyle.container} ${customerStyle.dxl} ${customerStyle.xl} ${customerStyle.lg} ${customerStyle.md} ${customerStyle.sm} ${customerStyle.base}`}>
       <MainTitle 
-        Title={`Popular Categories`}
+        Title={`Popular Products`}
       />
-      <div className={`grid  ${deviceSize ? 'grid-cols-2 sm:grid-cols-3' : 'xl:grid-cols-6 md:grid-cols-3 lg:grid-cols-4'}`}>
+      <div className={`grid 2xl:grid-cols-5 xl:grid-cols-4  lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 md:gap-0 gap-8`}>
         {
-          CategoryItems.map((item, index)=> {
+          ProductItems.map((item, index)=> {
             return(
-              <div key={index} className={`col-span-1 2xl:p-4 p-2` }>
-                <PopularCart 
-                  ID ={item.ID} 
-                  sourceURL ={item.sourceURL} 
-                  sourceAtl ={item.sourceAlt} 
-                  productName = {item.Name}
+              <div key={index} className={`col-span-1` }>
+                <ProductCard 
+                  Price={item.Price}
+                  cardSourceAlt={item.cardSourceAlt}
+                  cardSourceURL={item.cardSourceURL}
+                  cardTitle={item.cardTitle}
+                  discountPrice={item.discountPrice}
+                  offer={item.offer}
+                  productID={item.productID}
+                  viewRate={item.viewRate}
+                  btnLabel={item.btnLabel}
+                  key={item.productID}
                 />
               </div>
             )
@@ -47,4 +53,4 @@ function Category() {
   )
 }
 
-export default Category
+export default Products
