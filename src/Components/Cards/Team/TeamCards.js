@@ -2,19 +2,19 @@ import React, { useState } from 'react'
 import SocialMediaItems from './Components/SocialMediaItems';
 import PropTypes from 'prop-types'
 
-function TeamCards({memberName, memberJob, sourceURL}) {
+function TeamCards({memberName, memberJob, sourceURL, sourceAlt}) {
   const [textHover, setTextHover] = useState(false);
   const [textHover2, setTextHover2] = useState(false);
   return (
     <div 
-      className={`flex flex-col justify-start items-start max-w-[312px] min-h-[368px] border-2 rounded-md m-10 transition-all duration-1000 ease-linear delay-100 shadow ${textHover || textHover2 ? 'border-sky-300' : ' border-white'}`}
+      className={`flex flex-col justify-start items-start max-w-[312px]  border-2 rounded-md  p-4 transition-all duration-1000 ease-linear delay-100 shadow ${textHover || textHover2 ? 'border-sky-300' : ' border-white'}`}
     >
         <div className={'flex min-w-full overflow-hidden relative '}
          onMouseOver={()=>{setTextHover(true)}}
          onMouseOut={()=>{setTextHover(false)}}
         >
             <figure className={`flex justify-center items-center hover:scale-105 transition-all duration-500ease-linear z-10`}>
-               <img src={sourceURL} alt='' className='object-cover object-center'  />
+               <img src={sourceURL} alt={sourceAlt} className='object-cover object-center'  />
             </figure>
             {
               textHover && (
@@ -24,7 +24,7 @@ function TeamCards({memberName, memberJob, sourceURL}) {
               )
             }
         </div>
-        <div className={`flex-grow flex flex-col justify-center items-center min-w-full gap-2 cursor-pointer`}
+        <div className={`flex-grow flex flex-col justify-center items-center min-w-full gap-2 cursor-pointer py-8`}
           onMouseOver={()=>{setTextHover2(true)}}
           onMouseOut={()=>{setTextHover2(false)}}
         >

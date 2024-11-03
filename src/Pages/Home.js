@@ -5,6 +5,8 @@ import HeroMain from '../Features/Home/Hero/HeroMain'
 import PopularCategory from '../Features/Home/Popular/Category'
 import LatestNews from '../Features/Home/Blog/LatestNews'
 import  NewsLetter from '../Components/popup/NewsLetter'
+import Testimonial from '../Features/Home/Client/Testimonial'
+import Members from '../Features/Home/Client/Members'
 
 function Home() {
   return (
@@ -14,6 +16,8 @@ function Home() {
       <PopularCategory />
       <NewsLetter />
       <LatestNews />
+      <Members />
+      <Testimonial />
       <Footer />
     </div>
   )
