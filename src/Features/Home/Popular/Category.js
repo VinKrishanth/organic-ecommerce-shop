@@ -1,5 +1,8 @@
-import React from 'react'
 import React, {  useEffect, useState } from 'react'
+import PopularCart from '../../../Components/Cards/Category/PopularCart'
+import CategoryItems from './Components/CategoryItems'
+import MainTitle from '../../../Components/Title/MainTitle';
+
 function Category() {
     const [deviceSize, setDeviceSize] = useState(window.innerWidth <= 768);
     
@@ -21,7 +24,23 @@ function Category() {
 
   return (
     <section className={`${customerStyle.container} ${customerStyle.dxl} ${customerStyle.xl} ${customerStyle.lg} ${customerStyle.md} ${customerStyle.sm} ${customerStyle.base}`}>
-        Category
+      <MainTitle />
+      <div className={`grid  ${deviceSize ? 'grid-cols-2 sm:grid-cols-3' : 'xl:grid-cols-6 md:grid-cols-3 lg:grid-cols-4'}`}>
+        {
+          CategoryItems.map((item, index)=> {
+            return(
+              <div key={index} className={`col-span-1 2xl:p-4 p-2` }>
+                <PopularCart 
+                  ID ={item.ID} 
+                  sourceURL ={item.sourceURL} 
+                  sourceAtl ={item.sourceAlt} 
+                  productName = {item.Name}
+                />
+              </div>
+            )
+          })
+        }
+      </div>
     </section>
   )
 }
