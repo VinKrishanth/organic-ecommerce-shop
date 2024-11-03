@@ -8,6 +8,9 @@ import FreshCauliflowerSource from './FreshCauliflower.svg'
 import GreenChiliSource from './Green-Chili.svg'
 import GreenCapsicumSource from './Green-Capsicum.svg'
 import GreenLettuceSource from './Green-Lettuce.svg'
+import RedChiliSource from './Red-Chili.svg'
+import RedTomatosSoucre from './Red-Tomatos.svg'
+import SurjapurMangoSoucre from './Surjapur-Mango.svg'
 
 
 export const GreenApple = GreenAppleSource
@@ -20,3 +23,6 @@ export const FreshCauliflower = FreshCauliflowerSource
 export const GreenChili = GreenChiliSource
 export const GreenCapsicum = GreenCapsicumSource
 export const GreenLettuce = GreenLettuceSource
+export const RedChili = RedChiliSource
+export const RedTomatos = RedTomatosSoucre
+export const SurjapurMango = SurjapurMangoSoucre

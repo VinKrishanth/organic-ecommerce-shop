@@ -8,6 +8,7 @@ import  NewsLetter from '../Components/popup/NewsLetter'
 import Testimonial from '../Features/Home/Client/Testimonial'
 import Members from '../Features/Home/Client/Members'
 import Products from '../Features/Home/Popular/Products'
+import Banner from '../Features/Home/Banner/Banner'
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
       <PopularCategory />
       <Products />
       <NewsLetter />
+      <Banner/>
       <LatestNews />
       <Members />
       <Testimonial />

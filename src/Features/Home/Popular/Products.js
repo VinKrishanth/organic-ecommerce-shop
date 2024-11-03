@@ -31,20 +31,22 @@ function Products() {
         {
           ProductItems.map((item, index)=> {
             return(
-              <div key={index} className={`col-span-1` }>
-                <ProductCard 
-                  Price={item.Price}
-                  cardSourceAlt={item.cardSourceAlt}
-                  cardSourceURL={item.cardSourceURL}
-                  cardTitle={item.cardTitle}
-                  discountPrice={item.discountPrice}
-                  offer={item.offer}
-                  productID={item.productID}
-                  viewRate={item.viewRate}
-                  btnLabel={item.btnLabel}
-                  key={item.productID}
-                />
-              </div>
+              !item.isNew && (
+                <div key={index} className={`col-span-1` }>
+                    <ProductCard 
+                      Price={item.Price}
+                      cardSourceAlt={item.cardSourceAlt}
+                      cardSourceURL={item.cardSourceURL}
+                      cardTitle={item.cardTitle}
+                      discountPrice={item.discountPrice}
+                      offer={item.offer}
+                      productID={item.productID}
+                      viewRate={item.viewRate}
+                      btnLabel={item.btnLabel}
+                      key={item.productID}
+                    />
+                </div>
+              )
             )
           })
         }

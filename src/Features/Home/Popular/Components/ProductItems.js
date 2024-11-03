@@ -1,4 +1,9 @@
-import {GreenApple, BigPotatoes, ChineseCabbage, Corn, Eggplant, FreshCauliflower, FreshIndianMalta, GreenCapsicum, GreenChili, GreenLettuce} from '../../../../assets/Product/Popular/index.js'
+import {GreenApple, BigPotatoes, ChineseCabbage, Corn, 
+        Eggplant, FreshCauliflower, FreshIndianMalta, 
+        GreenCapsicum, GreenChili, GreenLettuce,
+        RedChili, RedTomatos, SurjapurMango
+    } 
+    from '../../../../assets/Product/Popular/index.js'
 
 const ProductItems =[
     {
@@ -110,6 +115,42 @@ const ProductItems =[
         cardSourceURL : GreenChili,
         btnLabel : false,
         viewRate : 5, 
+    },
+    {
+        productID :'cardP11',
+        cardTitle : 'Red Chili',
+        discountPrice : ``,
+        Price : 12.00,
+        offer : false,
+        cardSourceAlt : 'The Product information', 
+        cardSourceURL : RedChili,
+        btnLabel : false,
+        viewRate : 4, 
+        isNew: true
+    },
+    {
+        productID :'cardP12',
+        cardTitle : 'Red Tomatos',
+        discountPrice : `$20.99`,
+        Price : 9.00,
+        offer : true,
+        cardSourceAlt : 'The Product information', 
+        cardSourceURL : RedTomatos,
+        btnLabel : 'Sale 50%',
+        viewRate : 3, 
+        isNew: true
+    },
+    {
+        productID :'cardP13',
+        cardTitle : 'Surjapur Mango',
+        discountPrice : ``,
+        Price : 34.00,
+        offer : false,
+        cardSourceAlt : 'The Product information', 
+        cardSourceURL : SurjapurMango,
+        btnLabel : false,
+        viewRate : 5, 
+        isNew: true
     },
 ]
 export default ProductItems
