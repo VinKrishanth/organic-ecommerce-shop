@@ -6,9 +6,9 @@ import {handleClosePopup} from '../../Components/Js/commonButtonFunction'
 
 function NewsLetter() {
     const customerStyle = {
-        container: 'flex justify-center items-center bg-black bg-opacity-10 over-hidden z-10',
-        dxl: 'w-screen h-screen ',
-        xl: '',
+        container: 'flex justify-center items-center  over-hidden z-10',
+        dxl: '2xl:px-4 2xl:mt-32',
+        xl: 'xl:mt-16',
         lg: '',
         md: '',
         sm:'',
@@ -24,8 +24,8 @@ function NewsLetter() {
     }, []); 
   return (
     <section id='newLetter' className={`${customerStyle.container} ${customerStyle.dxl} ${customerStyle.xl} ${customerStyle.lg} ${customerStyle.md} ${customerStyle.sm} ${customerStyle.base} ${deviceSize && 'hidden'}`}>
-        <main className={`flex justify-between items-center border-2 bg-white rounded-xl p-4`}>
-          <figure className={`flex justify-center items-center`}>
+        <main className={`flex justify-between items-center border-2 bg-white rounded-xl p-4 2xl:scale-125 xl:scale-110 lg:scale-90 `}>
+          <figure className={`flex justify-center items-center `}>
             <img src={PopPupSource} alt='The New letter pop-pop' className={`object-cover object-center`} />
           </figure>  
           <div className={`flex-grow m flex flex-col justify-center items-center gap-8  py-8  relative`}>
