@@ -2,7 +2,7 @@ import React from 'react'
 import PropType from 'prop-types'
 import { useNavigate } from 'react-router-dom'
 
-function IconButton({sourceIcon, title, navigationURL, btnStyle}) {
+function IconButton({sourceIcon, title, navigationURL, btnStyle, iconShow}) {
   const navigate = useNavigate();
   const handleReadMoreButton = () =>{
     navigate(navigationURL);
@@ -14,7 +14,7 @@ function IconButton({sourceIcon, title, navigationURL, btnStyle}) {
         onClick={handleReadMoreButton}
     >
         {title}
-        <img src={sourceIcon} alt='' className='object-cover object-center max-h-3 min-w-4 pt-1' />
+        {!iconShow && <img src={sourceIcon} alt='' className='object-cover object-center max-h-3 min-w-4 pt-1' /> } 
     </button>
   )
 }

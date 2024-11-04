@@ -4,6 +4,14 @@ import {ArrowRightGreen} from '../../../../assets/Product/Blog/BlogItems.js'
 import HeroGallery from './HeroGallery.js'
 
 function Hero() {
+  const [deviceSize, setDeviceSize] = useState(window.innerWidth <= 768);
+    
+  useEffect(() => {
+      const handleResize = () => setDeviceSize(window.innerWidth <= 768);
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+  }, [deviceSize]); 
+
   const [Prev, setPrev] = useState({
     currentI: HeroGallery[0].sourceURL,
     Id: HeroGallery[0].ID,
@@ -39,19 +47,31 @@ function Hero() {
   }, [Prev.Id, HandleButtonClick]);
 
   return (
-    <div className={`flex-grow flex justify-start items-center p-12   2xl:min-h-[560px] relative`}>
-        <div className={`flex flex-col  text-left align-top gap-8 z-20`}>
-            <h1 className={`2xl:text-5xl font-semibold  tracking-normal text-white max-w-[75%] cursor-pointer hover:-translate-x-8  hover:scale-90 duration-700 ease-linear delay-200`}>Fresh & Healthy Organic Food</h1>
-            <p className={`2xl:text-2xl font-medium  tracking-wide text-white text-opacity-60  hover:text-opacity-100  border-l-4 pl-4 max-w-[25%] align-top  cursor-pointer`}>Sale Up to  <span className={`text-white text-opacity-100 hover:text-Warning`}>48% </span> off</p>
-            <IconButton  
-              sourceIcon ={ArrowRightGreen}
-              title={`Shop now`}
-              navigationURL = {``}
-              btnStyle= {`flex justify-center items-center text-Primary bg-white 2xl:min-w-[162px] 2xl:min-h-[51px] 2xl:max-w-[192px] rounded-full`}
-            />
-             <div className={`flex gap-2 2xl:pt-20`}>
+    <div className={`flex-grow flex justify-start items-center md:p-16 sm:p-8  p-4 2xl:min-h-[560px] min-w-full relative`}>
+        <div className={`flex flex-col  text-left align-top lg:gap-8 sm:gap-6 gap-2 z-20`}>
+            <h1 className={`lg:text-5xl  sm:text-3xl text-sm font-semibold  tracking-normal text-white sm:max-w-[75%] max-w-[80%] cursor-pointer hover:-translate-x-8  hover:scale-90 duration-700 ease-linear delay-200`}>Fresh & Healthy Organic Food</h1>
+            <p className={`lg:text-2xl  sm:text-lg text-xs font-medium  tracking-wide text-white text-opacity-60  hover:text-opacity-100  sm:border-l-4 md:pl-4 border-l-2 pl-2 lg:max-w-[25%] max-w-[40%] align-top  cursor-pointer`}>Sale Up to  <span className={`text-white text-opacity-100 hover:text-Warning`}>48% </span> off</p>
+                {
+                  deviceSize ? (
+                    <IconButton  
+                      iconShow = {true}
+                      sourceIcon ={ArrowRightGreen}
+                      title={`Shop now`}
+                      navigationURL = {``}
+                      btnStyle= {`flex justify-center md:text-sm text-xs items-center text-Primary bg-white sm:min-w-[162px] md:min-h-[51px] sm:max-w-[192px] max-w-20 min-h-4 rounded-full`}
+                    />
+                  ) : (
+                    <IconButton  
+                      sourceIcon ={ArrowRightGreen}
+                      title={`Shop now`}
+                      navigationURL = {``}
+                      btnStyle= {`flex justify-center md:text-sm text-xs items-center text-Primary bg-white sm:min-w-[162px] md:min-h-[51px] sm:max-w-[192px] max-w-20 min-h-4 rounded-full`}
+                    />
+                  )
+                }
+             <div className={`flex gap-2 xl:pt-32 lg:pt-24 pt-8  `}>
               {HeroGallery.map((item) => (
-                <p key={item.ID} id={item.ID} className={`min-h-2 ${Prev.Id === item.ID ? 'min-w-4' : 'min-w-2'}   bg-white rounded-full`}></p>
+                <p key={item.ID} id={item.ID} className={`sm:min-h-2 min-h-1 ${Prev.Id === item.ID ? 'min-w-4' : 'min-w-2'}   bg-white rounded-full`}></p>
               ))}
             </div>
         </div>
