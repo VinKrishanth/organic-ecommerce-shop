@@ -21,7 +21,7 @@ function Banner() {
     }
   return (
     <section className={`${customerStyle.container} ${customerStyle.dxl} ${customerStyle.xl} ${customerStyle.lg} ${customerStyle.md} ${customerStyle.sm} ${customerStyle.base}`}>
-        <BannerBigXL />
+      {!deviceSize && <BannerBigXL />}  
     </section>
   )
 }

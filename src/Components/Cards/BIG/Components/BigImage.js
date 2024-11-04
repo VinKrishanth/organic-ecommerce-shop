@@ -7,7 +7,7 @@ import GhostButton from '../../../Button/GhostButton'
 import WishlistButton from '../../../Button/WishlistButton'
 import QuickViewButton from '../../../Button/QuickViewButton'
 
-function BigImage() {
+function BigImage(textHoverPro) {
     const handleSaleClick = () =>{
         console.log(`Sale click `);
     }
@@ -29,37 +29,38 @@ function BigImage() {
     }
 
   return (
-    <div className={`min-w-full min-h-[446px] relative px-8 overflow-hidden`}>
+    <div className={`sm:min-w-full sm:min-h-[446px] relative sm:px-8 overflow-hidden`}>
         <figure className={`flex  justify-center items-center pt-8`}>
-            <img src={bigSource} alt='' className={`object-cover object-center cursor-pointer hover:scale-105 transition-all duration-500 ease-linear delay-100`} />
+            <img src={bigSource} alt='' className={`object-cover object-center cursor-pointer hover:scale-105 transition-all duration-500 ease-linear delay-100 `} />
         </figure>
-        <div className='flex justify-center items-center absolute z-20 top-0 left-0 p-8 gap-2 '>
+        <div className='flex justify-center items-center absolute z-20 top-0 left-0 sm:p-8 p-4 gap-4 '>
             <TagsButton 
                 key={1}
                 Type={'Default'}
                 label={'sale 50%'}
                 onClick={handleSaleClick}
-                tagStyle={'hover:scale-95 transition-all duration-500 ease-linear delay-100'}
+                tagStyle={'hover:scale-95 transition-all duration-500 ease-linear delay-100 sm:scale-110 scale-90'}
             />
             <TagsButton 
                 key={2}
                 Type={'BestSale'}
                 onClick={handleBestSaleClick}
-                tagStyle={'hover:scale-95 transition-all duration-500 ease-linear delay-100'}
+                tagStyle={'hover:scale-95 transition-all duration-500 ease-linear delay-100  '}
             />
         </div>
-        <div className={`flex justify-between items-center absolute bottom-0 max-w-full  gap-4`}>
+        <div className={`flex justify-between items-center gap-2 max-w-full sm:scale-100 scale-90 xl:pb-0  pb-4`}>
             <WishlistButton 
                 onClick={handleWishlistClick}
             />
             <GhostButton 
                 btnStyle={`flex-grow`}
                 label={`Add to Cart`}
-                minHight={`min-h-[45px]`}
-                minWidth={`min-w-[345px]`}
+                minHight={`min-h-[45px] `}
+                minWidth={`sm:min-w-[345px] `}
                 textHover={true}
-                textSize={'text-base'}
+                textSize={'2xl:text-base'}
                 onClick={handleAddCardClick}
+                textHoverPro={textHoverPro}
             />
             <QuickViewButton 
                 ButtonHover={true}

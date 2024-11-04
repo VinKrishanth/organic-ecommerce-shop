@@ -9,7 +9,7 @@ function BigOffer() {
     mins: '00',
     secs: '00',
   });
-  const targetDate = new Date('10/31/2024 04:58 AM');
+  const targetDate = new Date('11/15/2024 00:00 AM');
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -21,8 +21,8 @@ function BigOffer() {
   }, [targetDate]);
 
   return (
-    <div className='flex flex-col justify-start items-center min-w-full placeholder-teal-400 mt-4 gap-2'>
-      <h2 className='font-sm align-top font-medium text-center leading-5 tracking-normal'>
+    <div className='flex flex-col justify-start items-center min-w-full placeholder-teal-400 sm:mt-10 gap-2 sm:scale-100 scale-75'>
+      <h2 className='text-sm align-top font-medium text-center leading-5 tracking-normal'>
         Hurry up! Offer ends In:
       </h2>
       <div className='flex justify-center items-start min-w-full'>
