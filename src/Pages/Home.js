@@ -10,11 +10,13 @@ import Members from '../Features/Home/Client/Members'
 import Products from '../Features/Home/Popular/Products'
 import Banner from '../Features/Home/Banner/Banner'
 import HotDeal from '../Features/Home/Popular/HotDeal'
+import HeroDefault from '../Features/Home/Hero/HeroDefault'
 
 function Home() {
   return (
     <div>
       <Header />
+      <HeroDefault />
       <PopularCategory />
       <Products />
       <NewsLetter />

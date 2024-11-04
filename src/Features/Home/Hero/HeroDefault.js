@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react'
 import SideBars from './Components/SideBars';
 import Hero from './Components/Hero';
+import Feature from './Components/Feature';
 
 export const UserContext = createContext();
 
@@ -29,6 +30,7 @@ function HeroDefault() {
                 <SideBars />
                 <Hero />
             </div>
+            <Feature />
         </section>
     </UserContext.Provider>
   )

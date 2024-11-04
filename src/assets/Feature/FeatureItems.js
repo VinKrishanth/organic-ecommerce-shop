@@ -1,15 +1,15 @@
-import White247Source from './24-7-white.svg'
-import Black247Source from './24-7-black.svg'
-import Green247Source from './24-7-green.svg'
+import White247Source from './24-7-white-new.svg'
+import Black247Source from './24-7-black-new.svg'
+import Green247Source from './24-7-green-new.svg'
 import WhiteMoneyBoxSource from './money-box-white.svg'
 import BlackMoneyBoxSource from './money-box-black.svg'
 import GreenMoneyBoxSource from './money-box-green.svg'
 import WhiteShoppingSource from './shopping-white.svg'
 import BlackShoppingSource from './shopping-black.svg'
 import GreenShoppingSource from './shopping-green.svg'
-import WhiteSecureSource from './secure-black.svg'
-import BlackSecureSource from './secure-black.svg'
-import GreenSecureSource from './secure-green.svg'
+import WhiteSecureSource from './secure-white-new.svg'
+import BlackSecureSource from './secure-black-new.svg'
+import GreenSecureSource from './secure-green-new.svg'
 
 
 export const  White247 = White247Source

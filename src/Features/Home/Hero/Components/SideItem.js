@@ -8,7 +8,7 @@ function SideItem({ID, sourceMainURL, sourceHoverURL, Title, onClick}) {
     <li 
       key={ID}
       id={ID}
-      className={`flex justify-start items-center min-h-14 min-w-full gap-4 p-4 text-Gray90 bg-white hover:text-white hover:bg-Primary transition-all duration-400 ease-linear `}
+      className={`flex justify-start items-center min-h-14 min-w-full gap-4 p-4 text-Gray90 bg-white hover:text-white hover:bg-Primary transition-all duration-400 ease-linear cursor-pointer`}
       onMouseOver={() => {setTextHover(true)}}
       onMouseOut={() => {setTextHover(false)}}
       onClick={onClick}

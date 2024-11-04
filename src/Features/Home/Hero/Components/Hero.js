@@ -71,7 +71,7 @@ function Hero() {
                 }
              <div className={`flex gap-2 xl:pt-32 lg:pt-24 pt-8  `}>
               {HeroGallery.map((item) => (
-                <p key={item.ID} id={item.ID} className={`sm:min-h-2 min-h-1 ${Prev.Id === item.ID ? 'min-w-4' : 'min-w-2'}   bg-white rounded-full`}></p>
+                <p key={item.ID} id={item.ID} className={`sm:min-h-2 min-h-1 cursor-pointer ${Prev.Id === item.ID ? 'min-w-4' : 'min-w-2'}   bg-white rounded-full`}></p>
               ))}
             </div>
         </div>
