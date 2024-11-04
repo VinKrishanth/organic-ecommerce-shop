@@ -10,8 +10,8 @@ function NavigationPage({deviceSize, paddingLeft}) {
     const [textHover, setTextHover] = useState(false); 
     const location = useLocation()
   return (
-    <nav className={`flex justify-center items-center ${deviceSize ? '': `min-h-11 ${paddingLeft ? '' : '2xl:pl-[300px] xl:pl-16' }`} `}>
-        <ul className={`flex ${deviceSize ? '' : 'gap-16 '}`}>
+    <nav className={`flex justify-center items-center ${deviceSize ? '': `min-h-11 ${paddingLeft && 'pl-8 2xl:pl-[300px] xl:pl-16' }`} `}>
+        <ul className={`flex ${deviceSize ? '' : 'gap-8 '}`}>
             {
                 NavLinks.map((item, index) => {
                     return(

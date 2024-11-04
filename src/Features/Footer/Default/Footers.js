@@ -15,7 +15,7 @@ function Footers() {
 
     const customerStyle = {
         container: 'mt-16',
-        dxl: '2xl:px-32 2xl:py-16',
+        dxl: '2xl:px-16 2xl:py-16',
         xl: 'xl:py-16',
         lg: 'lg:min-w-screen ',
         md: 'md:py-10 ',
