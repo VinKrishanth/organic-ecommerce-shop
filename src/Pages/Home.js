@@ -15,12 +15,12 @@ function Home() {
   return (
     <div>
       <Header />
-      <HeroMain />
       <PopularCategory />
       <Products />
       <NewsLetter />
       <Banner/>
       <HotDeal />
+      <HeroMain />
       <LatestNews />
       <Members />
       <Testimonial />
