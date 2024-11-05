@@ -1,0 +1,5 @@
+export {default as AboutUsSource } from './about-us.svg'
+export {default as DeliverySource } from './delivery-source.svg'
+export {default as CheckBlueSource } from './check-blue.svg'
+export {default as CheckGreenSource } from './check-green.svg'
+export {default as DeliveryBGSource } from './delivery-new.png'

@@ -10,6 +10,12 @@ import GreenShoppingSource from './shopping-green.svg'
 import WhiteSecureSource from './secure-white-new.svg'
 import BlackSecureSource from './secure-black-new.svg'
 import GreenSecureSource from './secure-green-new.svg'
+import leafBlackSource from './leaf-normal.svg'
+import leafGreenSource from './leaf-green.svg'
+import leafWhiteSource from './leaf-white.svg'
+import starsGreenSource from './stars-green.svg'
+import starsNormalSource from './stars-normal.svg'
+import starsWhiteSource from './stars-white.svg'
 
 
 export const  White247 = White247Source
@@ -24,3 +30,9 @@ export const  GreenShopping = GreenShoppingSource
 export const  WhiteSecure = WhiteSecureSource
 export const  BlackSecure = BlackSecureSource
 export const  GreenSecure = GreenSecureSource
+export const  leafBlack = leafBlackSource
+export const  leafGreen = leafGreenSource
+export const  leafWhite = leafWhiteSource
+export const  starsGreen = starsGreenSource
+export const  starsNormal = starsNormalSource
+export const  starsWhite = starsWhiteSource
