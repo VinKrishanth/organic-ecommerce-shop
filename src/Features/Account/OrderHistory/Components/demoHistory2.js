@@ -1,4 +1,4 @@
-const demoHistoryAll = [
+const demoHistory2 = [
     {
         orderID: '#3933',
         orderDate : '8 Sep, 2024',
@@ -13,39 +13,6 @@ const demoHistoryAll = [
         total: '$135.00',
         productCount: 5,
         status: 'on the way',
-        isVisible: true
-    },
-    {
-        orderID: '#5028',
-        orderDate : '8 Sep, 2024',
-        total: '$135.00',
-        productCount: 5,
-        status: 'Completed',
-        isVisible: true,
-        isVisible: true
-    },
-    {
-        orderID: '#4600',
-        orderDate : '8 Sep, 2024',
-        total: '$135.00',
-        productCount: 5,
-        status: 'Completed',
-        isVisible: true
-    },
-    {
-        orderID: '#4152',
-        orderDate : '8 Sep, 2024',
-        total: '$135.00',
-        productCount: 5,
-        status: 'Completed',
-        isVisible: true
-    },
-    {
-        orderID: '#8811',
-        orderDate : '8 Sep, 2024',
-        total: '$135.00',
-        productCount: 5,
-        status: 'Completed',
         isVisible: true
     },
     {
@@ -98,4 +65,4 @@ const demoHistoryAll = [
     },
 ]
 
-export default demoHistoryAll
+export default demoHistory2

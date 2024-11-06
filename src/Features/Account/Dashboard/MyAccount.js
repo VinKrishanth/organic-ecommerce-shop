@@ -3,6 +3,7 @@ import DashboardMain from '../../../Containers/DashboardMain';
 import Profile from './Components/Profile';
 import BillingAddress from './Components/BillingAddress';
 import OrderHistory from './Components/OrderHistory';
+import demoHistory from '../OrderHistory/Components/demoHistory.js'
 
 function MyAccount() {
     const [deviceSize, setDeviceSize] = useState(window.innerWidth <= 768);
@@ -31,7 +32,7 @@ function MyAccount() {
       <div className={`flex-grow grid grid-cols-9 gap-4`}>
         <Profile />
         <BillingAddress />
-        <OrderHistory />
+        <OrderHistory historyData={demoHistory} />
       </div>
     </section>
   )

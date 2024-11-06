@@ -6,7 +6,7 @@ function TBody({historyData}) {
     textHover: 'hover:scale-110 transition-all duration-500 ease-linear hover:translate-x-2'
   }
   return (
-    <tbody className={`min-w-full`}>
+    <tbody className={`min-w-full sticky top-2`}>
         {
             historyData.map((item, index) => {
                 return(
