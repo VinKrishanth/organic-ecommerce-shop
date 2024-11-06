@@ -1,10 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Login from '../Pages/Auth/Login';
 
 import { Home, Shop, Blog, Pages, About, Contact, Product } from '../Pages';
 import { Fruit, Vegetables, Fish, Meat, Drink, IceCream, Bread, Butter, Cooking ,TrackOrder} from '../Pages/Categories';
 import {BeautyAndHealth , BreadAndBakery, FruitVegetable, MeatAndFish} from '../Pages/shops'
-import {Cart, MyAccount, OrderHistory, Wishlist} from '../Pages/Account'
+import {Cart, MyAccount, OrderHistory, Wishlist, Setting} from '../Pages/Account'
 import {Faqs, Policy, Terms} from '../Pages/Helps'
 
 function Layouts() {
@@ -18,6 +19,7 @@ function Layouts() {
         <Route path="/organic-ecommerce-shop/about" element={<About />} />
         <Route path="/organic-ecommerce-shop/contact" element={<Contact />} />
         <Route path="/organic-ecommerce-shop/product" element={<Product />} />
+        <Route path="/organic-ecommerce-shop/login" element={<Login />} />
 
         
         <Route path="/organic-ecommerce-shop/categories/fresh-fruit" element={<Fruit />} />
@@ -40,6 +42,7 @@ function Layouts() {
         <Route path="/organic-ecommerce-shop/my-account/order-history" element={<OrderHistory />} />
         <Route path="/organic-ecommerce-shop/my-account/shopping-cart" element={<Cart />} />
         <Route path="/organic-ecommerce-shop/my-account/wishlist" element={<Wishlist />} />
+        <Route path="/organic-ecommerce-shop/my-account/setting" element={<Setting />} />
 
         <Route path="/organic-ecommerce-shop/helps/faqs" element={<Faqs />} />
         <Route path="/organic-ecommerce-shop/helps/terms-and-condition" element={<Terms />} />

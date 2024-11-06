@@ -7,6 +7,7 @@ import {
     wishlistHover, wishlistNormal
 } from '../../assets/Dashboard/index.js'
 
+const nav = `/organic-ecommerce-shop/my-account`;
 const Navigation = [
     {
         ID: 'navID1',
@@ -14,6 +15,7 @@ const Navigation = [
         sourceHover: dashboardHover,
         sourceAlt: 'The Navigation Dashboard icon',
         NavigationName: 'Dashboard',
+        NavigationURL: `${nav}`,
     },
     {
         ID: 'navID2',
@@ -21,6 +23,7 @@ const Navigation = [
         sourceHover: orderHover,
         sourceAlt: 'The Navigation Dashboard icon',
         NavigationName: 'Order History',
+        NavigationURL: `${nav}/order-history`,
     },
     {
         ID: 'navID3',
@@ -28,6 +31,7 @@ const Navigation = [
         sourceHover: wishlistHover,
         sourceAlt: 'The Navigation Wishlist icon',
         NavigationName: 'Wishlist',
+        NavigationURL: `${nav}/wishlist`,
     },
     {
         ID: 'navID4',
@@ -35,6 +39,7 @@ const Navigation = [
         sourceHover: shoppingHover,
         sourceAlt: 'The Navigation Shopping Cart icon',
         NavigationName: 'Shopping Cart',
+        NavigationURL: `${nav}/shopping-cart`,
     },
     {
         ID: 'navID5',
@@ -42,6 +47,7 @@ const Navigation = [
         sourceHover: settingHover,
         sourceAlt: 'The Navigation Settings icon',
         NavigationName: 'Settings',
+        NavigationURL: `${nav}/setting`,
     },
     {
         ID: 'navID6',
@@ -49,6 +55,7 @@ const Navigation = [
         sourceHover: logoutHover,
         sourceAlt: 'The Navigation Log-out icon',
         NavigationName: 'Log-out',
+        NavigationURL: `/organic-ecommerce-shop/login`,
     },
 ]
 
