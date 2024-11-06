@@ -7,11 +7,10 @@ function App() {
   const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
   console.log(isLoggedIn);
   return (
-    <div className={``}>
+    <>
       {!isLoggedIn && <Login /> }
       {isLoggedIn &&  <Layouts /> }
-    </div>
-
+    </>
   );
 }
 

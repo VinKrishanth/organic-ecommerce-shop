@@ -1,10 +1,18 @@
 import React, { useState } from 'react'
 
-function TextInput({onChange, placeholder, value , type, validationText, SourceURL, SourceAlr}) {
+function TextInput({onChange, placeholder, value , type, validationText, SourceURL, SourceAlr, label ,name}) {
   const [textHover, setTextHover] = useState();
   return (
-    <div className='flex flex-col gap-1 m-32 w-[428px] relative'>
+    <div className='flex flex-col gap-1 min-w-full relative'>
+        {
+            label && (
+                <label className={`text-sm font-normal leading-6 tracking-normal align-top text-Gray90 capitalize`}>
+                    {label}
+                </label>
+            )
+        }
         <input 
+            name={name}
             type={type}
             placeholder={placeholder}
             onChange={onChange}
