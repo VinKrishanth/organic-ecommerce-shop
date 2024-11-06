@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import DashboardMain from '../../../Containers/DashboardMain';
 import AccountSetting from './AccountSetting';
+import ChangePassword from './ChangePassword';
+import BillingAddress from './BillingAddress';
 
 function Setting() {
     const [deviceSize, setDeviceSize] = useState(window.innerWidth <= 768);
@@ -26,8 +28,10 @@ function Setting() {
       <div className={`min-w-[312px]`}>
         <DashboardMain />
       </div> 
-      <div className={`flex-grow grid grid-cols-9 gap-4`}>
+      <div className={`flex-grow flex-col grid grid-cols-9 gap-4`}>
         <AccountSetting />
+        <BillingAddress />
+        <ChangePassword />
       </div>
     </section>
   )

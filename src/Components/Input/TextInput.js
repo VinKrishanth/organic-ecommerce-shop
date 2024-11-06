@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function TextInput({onChange, placeholder, value , type, validationText, SourceURL, SourceAlr, label ,name}) {
+function TextInput({onChange, placeholder, value , type, validationText, SourceURL, SourceAlr, label ,name,  onMouseOver, onMouseOut}) {
   const [textHover, setTextHover] = useState();
   return (
     <div className='flex flex-col gap-1 min-w-full relative'>
@@ -13,7 +13,7 @@ function TextInput({onChange, placeholder, value , type, validationText, SourceU
         }
         <input 
             name={name}
-            type={type}
+            type={name === onMouseOver ? onMouseOver : type}
             placeholder={placeholder}
             onChange={onChange}
             value={value}
@@ -21,6 +21,17 @@ function TextInput({onChange, placeholder, value , type, validationText, SourceU
             onMouseOver={()=>setTextHover(true)}
             onMouseOut={()=>setTextHover(false)}
         />
+        {
+            SourceURL && (
+                <figure 
+                    className={`absolute right-0 top-6 flex justify-center items-center p-4 scale-125 cursor-pointer `}
+                    onMouseOver={onMouseOver}
+                    onMouseOut={onMouseOut}
+                >
+                    <img src={SourceURL} alt={SourceAlr} className={'object-contain object-center min-w-5 min-h-5'} />
+                </figure>
+            )
+        }
         {
             validationText && (
                 <>
