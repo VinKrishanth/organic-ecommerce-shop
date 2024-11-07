@@ -5,7 +5,7 @@ import Login from '../Pages/Auth/Login';
 import { Home, Shop, Blog, Pages, About, Contact, Product } from '../Pages';
 import { Fruit, Vegetables, Fish, Meat, Drink, IceCream, Bread, Butter, Cooking ,TrackOrder} from '../Pages/Categories';
 import {BeautyAndHealth , BreadAndBakery, FruitVegetable, MeatAndFish} from '../Pages/shops'
-import {Cart, MyAccount, OrderHistory, Wishlist, Setting} from '../Pages/Account'
+import {Cart, MyAccount, OrderHistory, Wishlist, Setting,OrderDetails} from '../Pages/Account'
 import {Faqs, Policy, Terms} from '../Pages/Helps'
 
 function Layouts() {
@@ -43,6 +43,7 @@ function Layouts() {
         <Route path="/organic-ecommerce-shop/my-account/shopping-cart" element={<Cart />} />
         <Route path="/organic-ecommerce-shop/my-account/wishlist" element={<Wishlist />} />
         <Route path="/organic-ecommerce-shop/my-account/setting" element={<Setting />} />
+        <Route path="/organic-ecommerce-shop/my-account/order-history/order-details" element={<OrderDetails />} />
 
         <Route path="/organic-ecommerce-shop/helps/faqs" element={<Faqs />} />
         <Route path="/organic-ecommerce-shop/helps/terms-and-condition" element={<Terms />} />

@@ -6,10 +6,7 @@ function Items({sourceMain, sourceHover, sourceAlt, index , Title, ID , Navigati
     <div 
         key={index}
         id={ID}
-        className={`flex justify-start items-center gap-2 min-h-14  border-l-4  
-          ${NavigationURL === Location ? 'bg-Gray05 text-Gray90 border-Primary ' : 'bg-white text-Gray60 border-white '} 
-          ${(textHover === index && NavigationURL !== Location) && 'text-Gray90 bg-sky-300 border-textBlue' }
-        `}
+        className={`flex justify-start items-center gap-2 min-h-14  border-l-4  cursor-pointer ${NavigationURL === Location ? 'bg-Gray05 text-Gray90 border-Primary ' : 'bg-white text-Gray60 border-white '}  ${(textHover ) && 'hover:text-Gray90 hover:bg-sky-300 hover:border-textBlue' }`}
         onMouseOver={() => {setTextHover(index)}}
         onMouseOut={() => {setTextHover(false)}}
         onClick={onClick}
