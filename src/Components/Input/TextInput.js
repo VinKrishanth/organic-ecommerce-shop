@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function TextInput({onChange, placeholder, value , type, validationText, SourceURL, SourceAlr, label ,name,  onMouseOver, onMouseOut}) {
+function TextInput({onChange, placeholder, value , type, validationText, SourceURL, SourceAlr, label ,name,  onMouseOver, onMouseOut, inputStyle, readOnly}) {
   const [textHover, setTextHover] = useState();
   return (
     <div className='flex flex-col gap-1 min-w-full relative'>
@@ -17,9 +17,10 @@ function TextInput({onChange, placeholder, value , type, validationText, SourceU
             placeholder={placeholder}
             onChange={onChange}
             value={value}
-            className={`border-2 min-w-full min-h-[49px] pl-4 text-base leading-5 tracking-normal align-top font-normal placeholder-Gray40 focus:outline-none rounded-lg ${textHover && validationText}`}
+            className={` ${inputStyle ? inputStyle : 'border-2 pl-4 min-h-[49px]'} min-w-full  text-base leading-5 tracking-normal align-top font-normal placeholder-Gray40 focus:outline-none rounded-lg ${textHover && validationText}`}
             onMouseOver={()=>setTextHover(true)}
             onMouseOut={()=>setTextHover(false)}
+            readOnly={readOnly}
         />
         {
             SourceURL && (
