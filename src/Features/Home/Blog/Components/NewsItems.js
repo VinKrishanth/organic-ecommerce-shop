@@ -12,7 +12,7 @@ function NewsItems() {
                         <Blogs
                             key={index} 
                             blogSource ={news.sourceURL}
-                            blogSourceURL ={`/`}
+                            blogSourceURL ={`/organic-ecommerce-shop/blog`}
                             blogTitle={news.newsTitle}
                             blogDate={news.updateDate}
                             blogMonth={news.updateMonth}

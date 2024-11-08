@@ -1,11 +1,10 @@
 import React from 'react'
 // import {currentDateAndMonth} from '../../Js/calculateTimeLeft'
-import TagInfo from './Components/TagInfo';
-import BlogItems from '../../../assets/Product/Blog/BlogItems.js'
 import sourceIcon from '../../../assets/Product/Blog/arrow-right.svg'
 import IconButton from '../../Button/IconButton.js';
 import PropType from 'prop-types'
 import PropTypes from 'prop-types';
+import Tags from './Components/Tags.js';
 
 function Blogs({blogSource , blogSourceURL, blogTitle, blogDate, blogMonth, ID ,customerStyle}) {
 //   const currentInfo = currentDateAndMonth();
@@ -24,33 +23,7 @@ function Blogs({blogSource , blogSourceURL, blogTitle, blogDate, blogMonth, ID ,
         <div className={`flex-grow md:my-8 sm:py-4 sm:scale-100 scale-90 `}>
             <div className={`flex flex-col justify-start items-start md:gap-6 gap-4 text-justify md:px-6`}>
                 <div className={`flex justify-start items-center min-w-full 2xl:gap-2  gap-[2px]`}>
-                    {
-                        BlogItems.map((item, index)=>{
-                            return(
-                                item.available ? (
-                                    <TagInfo 
-                                        index ={index+1} 
-                                        SourceHoverURL ={item.SourceHoverURL}
-                                        SourceURL = {item.SourceURL}
-                                        sourceAlt ={item.Name}
-                                        Title ={item.Title}
-                                        subTitle={item.subTitle}
-                                        key={index}
-                                    />
-                                ) : (
-                                    <TagInfo 
-                                        index ={index+1} 
-                                        SourceHoverURL ={item.SourceHoverURL}
-                                        SourceURL = {item.SourceURL}
-                                        sourceAlt ={item.Name}
-                                        Title ={item.subTitle}
-                                        subTitle={''}
-                                        key={index}
-                                    />
-                                )
-                            )
-                        })
-                    }
+                    <Tags />
                 </div>
                 <h2 className={`2xl:text-lg text-xs font-medium  align-top leading-5 tracking-normal  text-Gray90 hover:text-Primary transition-all duration-500 delay-75 ease-linear text-justify`} >{blogTitle}</h2>
                 <IconButton 

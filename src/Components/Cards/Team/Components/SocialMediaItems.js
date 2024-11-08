@@ -3,17 +3,31 @@ import SocialMediaButton from '../../../Button/SocialMediaButton'
 import SocialMedia from '../../../../assets/Icons/SocialMedia/SocialMedia.js'
 
 
-function SocialMediaItems() {
+function SocialMediaItems(conditionAll) {
  const handleSocialButton = (item) => {
     console.log(`click button -${item}`);
  }
 
   return (
-    <div className={`flex justify-center items-center min-w-full gap-4 px-10`}>
+    <div className={`flex justify-center items-center min-w-full gap-4 ${!conditionAll &&'px-10'} `}>
         {
-            SocialMedia.map((item, index) => {
+             conditionAll  && SocialMedia.map((item, index) => {
                 return(
+                    <SocialMediaButton 
+                        HoverIcon={item.SourceHoverURL}
+                        Icon={item.SourceURL}
+                        key={index}
+                        btnBG={'bg-Gray05'}
+                        btnBGHover={'bg-Primary'}
+                        onClick={()=>{handleSocialButton(item.Name)}}
 
+                    />
+                )
+            })
+        }
+        {
+            !conditionAll  && SocialMedia.map((item, index) => {
+                return(
                     item.available && (
                         <SocialMediaButton 
                             HoverIcon={item.SourceHoverURL}
@@ -25,7 +39,6 @@ function SocialMediaItems() {
 
                         />
                     )
-
                 )
             })
         }
