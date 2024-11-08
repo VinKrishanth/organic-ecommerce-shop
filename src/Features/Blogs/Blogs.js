@@ -29,7 +29,7 @@ function Blogs() {
         />
         <div className={`${customerStyle.container} ${customerStyle.dxl} ${customerStyle.xl} ${customerStyle.lg} ${customerStyle.md} ${customerStyle.sm} ${customerStyle.base}`}>
             <BlogTop />
-            <div className={`min-w-full grid  grid-cols-12 gap-16 first-line:min-h-96`}>
+            <div className={`min-w-full grid  grid-cols-12 gap-16 min-h-96`}>
                 <Filter />
                 <Blog />
             </div>

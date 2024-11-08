@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from '../Pages/Auth/Login';
 
-import { Home, Shop, Blog, Pages, About, Contact, Product } from '../Pages';
+import { Home, Shop, Blog, Pages, About, Contact, Product,SingleBlogs } from '../Pages';
 import { Fruit, Vegetables, Fish, Meat, Drink, IceCream, Bread, Butter, Cooking ,TrackOrder} from '../Pages/Categories';
 import {BeautyAndHealth , BreadAndBakery, FruitVegetable, MeatAndFish} from '../Pages/shops'
 import {Cart, MyAccount, OrderHistory, Wishlist, Setting,OrderDetails} from '../Pages/Account'
@@ -15,6 +15,7 @@ function Layouts() {
         <Route path="/" element={<Home />} />
         <Route path="/organic-ecommerce-shop/shop" element={<Shop />} />
         <Route path="/organic-ecommerce-shop/blog" element={<Blog />} />
+        <Route path="/organic-ecommerce-shop/blog/single-blog" element={<SingleBlogs />} />
         <Route path="/organic-ecommerce-shop/pages" element={<Pages />} />
         <Route path="/organic-ecommerce-shop/about" element={<About />} />
         <Route path="/organic-ecommerce-shop/contact" element={<Contact />} />
