@@ -7,11 +7,11 @@ import IconButton from '../../Button/IconButton.js';
 import PropType from 'prop-types'
 import PropTypes from 'prop-types';
 
-function Blogs({blogSource , blogSourceURL, blogTitle, blogDate, blogMonth}) {
+function Blogs({blogSource , blogSourceURL, blogTitle, blogDate, blogMonth, ID ,customerStyle}) {
 //   const currentInfo = currentDateAndMonth();
 
   return (
-    <div className={`flex flex-col justify-start items-start  min-w-full  border-2 p-4 rounded-lg hover:border-sky-500 transition-all duration-700 ease-linear delay-100`}>
+    <div id={ID} className={`flex flex-col justify-start items-start  min-w-full  border-2 p-4 rounded-lg hover:border-sky-500 transition-all duration-700 ease-linear delay-100 ${customerStyle}`}>
         <div className={`flex min-w-full relative`}>
             <figure className={`flex justify-center items-center min-w-full cursor-pointer`}>
                 <img src={blogSource} alt={`The last news pad`} className={`object-cover object-center opacity-100 hover:opacity-90 transition-all duration-200 ease-linear`} />
