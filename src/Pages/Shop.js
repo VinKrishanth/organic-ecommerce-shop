@@ -1,13 +1,13 @@
 import React from 'react'
 import Header from '../Containers/Header'
 import Footer from '../Containers/Footer'
-import Error from '../Components/NotFound/Error'
+import Shops from '../Features/Shop/Shops'
 
 function Shop() {
   return (
     <>
       <Header />
-      <Error />
+      <Shops />
       <Footer />
     </>
   )
