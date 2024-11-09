@@ -25,7 +25,9 @@ function BlogInfo() {
                   singleUse={true}
                 />
                 <div className={`flex justify-start items-center`}>
-                    <SocialMediaItems />
+                    <SocialMediaItems  
+                       
+                    />
                 </div>
             </div>
         </div>

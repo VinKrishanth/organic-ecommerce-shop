@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {mainSource,  blogSource1, blogSource2} from '../../../assets/Blog/Single/index.js'
 import Banner from './Single/Banner.js'
 import Comments from './Single/Comments.js'
@@ -6,11 +6,26 @@ import LeaveComment from './Single/LeaveComment.js'
 import BlogInfo from './Single/BlogInfo.js'
 
 function SingleBlogs() {
+
+    useEffect(() => {
+        let storedUser = JSON.parse(localStorage.getItem('information'));
+    
+        if (storedUser && storedUser.blogImage) {
+            const mainSourceURL = document.getElementById('singleBlogSource');
+    
+            if (mainSourceURL) {
+                // mainSourceURL.src = storedUser.blogImage;
+            }
+            console.log(storedUser);
+        }
+    }, []); 
+    
+
     return (
         <div className={`flex flex-col justify-start items-start col-span-8 mt-10 overflow-x-auto max-w-[872px]`}>
             <div className={`grid grid-cols-1 gap-8`}>
-                <div className={`flex justify-start items-start  min-h-fit col-span-1 max-h-[600px] `}>
-                    <img src={mainSource}  alt='single blog source' className={`object-cover object-center cursor-pointer`} />
+                <div className={`flex justify-start items-start  min-h-fit col-span-1   `}>
+                    <img id='singleBlogSource' src={`` || mainSource}  alt='single blog source' className={`object-contain object-center cursor-pointer min-h-[600px] max-w-[872px] hover:opacity-90 transition-all duration-500 ease-linear `} />
                 </div> 
                 <BlogInfo />
                 <h2 className={`text-lg font-medium leading-6 tracking-normal align-top text-justify cursor-pointer text-Gray90`}>Maecenas lacinia felis nec placerat sollicitudin. Quisque placerat dolor at scelerisque imperdiet. Phasellus tristique felis dolor.</h2>

@@ -19,7 +19,8 @@ function TeamCards({memberName, memberJob, sourceURL, sourceAlt}) {
             {
               textHover && (
                 <div className='flex justify-center items-center absolute min-w-full min-h-full z-30  bg-black bg-opacity-50 rounded-md cursor-pointer  transition-all duration-1000 ease-linear delay-100'>
-                  <SocialMediaItems />
+                  <SocialMediaItems 
+                  />
                 </div>
               )
             }

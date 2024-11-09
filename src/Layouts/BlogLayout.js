@@ -1,6 +1,7 @@
 import React, { createContext, useState } from 'react'
 import  Blogs from '../Features/Blogs/Blogs'
 import  SingleBlog from '../Features/Blogs/SingleBlog'
+import PropType from 'prop-types'
 
 export const UserContext = createContext();
 function BlogLayout({blogType}) {
@@ -14,4 +15,7 @@ function BlogLayout({blogType}) {
   )
 }
 
+BlogLayout.prototype = {
+  blogType: PropType.string.isRequired
+}
 export default BlogLayout

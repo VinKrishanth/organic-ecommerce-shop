@@ -29,9 +29,8 @@ function LeaveComment() {
 
   return (
     <div className={`flex justify-start items-start min-w-full min-h-64  col-span-1 relative overflow-x-hidden pt-16`}>
-        
-        <div className={`grid grid-cols-1 min-w-full gap-4`}>
-            <div className={`flex justify-start items-center col-span-1`}>
+        <div className={`grid grid-cols-1 min-w-full cursor-pointer gap-4 border-2 rounded-md hover:px-8 hover:py-16 border-white hover:border-Gray05 transition-all duration-1000 delay-300 ease-linear`}>
+            <div className={`flex justify-start items-center col-span-1 mb-4`}>
                 <h1 className={`text-2xl font-medium text-Gray90 text-left align-top tracking-normal leading-6 cursor-pointer hover:text-Primary hover:scale-110 transition-all duration-500 ease-linear delay-75  hover:translate-x-2`}>Leave a Comment</h1>
             </div>
             <div className={`flex flex-col justify-start items-start col-span-1 `}>

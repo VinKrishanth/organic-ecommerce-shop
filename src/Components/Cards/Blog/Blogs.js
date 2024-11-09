@@ -6,7 +6,7 @@ import PropType from 'prop-types'
 import PropTypes from 'prop-types';
 import Tags from './Components/Tags.js';
 
-function Blogs({blogSource , blogSourceURL, blogTitle, blogDate, blogMonth, ID ,customerStyle}) {
+function Blogs({blogSource , blogSourceURL, blogTitle, blogDate, blogMonth, ID ,customerStyle, onClick}) {
 //   const currentInfo = currentDateAndMonth();
 
   return (
@@ -30,6 +30,7 @@ function Blogs({blogSource , blogSourceURL, blogTitle, blogDate, blogMonth, ID ,
                     sourceIcon={sourceIcon}
                     title={'Read more'}
                     navigationURL ={blogSourceURL}
+                    onClick={onClick}
                 />
             </div>
         </div>
