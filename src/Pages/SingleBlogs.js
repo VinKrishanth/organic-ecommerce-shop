@@ -1,13 +1,15 @@
 import React from 'react'
 import Header from '../Containers/Header'
 import Footer from '../Containers/Footer'
-import SingleBlog from '../Features/Blogs/SingleBlog'
+import BlogLayout from '../Layouts/BlogLayout'
 
 function SingleBlogs() {
     return (
         <>
           <Header />
-          <SingleBlog />
+          <BlogLayout 
+            blogType={`single`}
+          />
           <Footer />
         </>
       )

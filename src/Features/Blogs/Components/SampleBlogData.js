@@ -65,7 +65,7 @@ const SampleBlogData = [
         updateMonth: 'NOV'
     },
     {
-        ID: 'blogSource10',
+        ID: 'news10',
         sourceURL: blogSource10,
         newsTitle: 'Curabitur porttitor orci eget neque accumsan venenatis.',
         updateDate: '05',

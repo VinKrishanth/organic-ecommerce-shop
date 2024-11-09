@@ -1,13 +1,15 @@
 import React from 'react'
 import Header from '../Containers/Header'
 import Footer from '../Containers/Footer'
-import Blogs from '../Features/Blogs/Blogs'
+import BlogLayout from '../Layouts/BlogLayout'
 
 function Blog() {
   return (
     <>
       <Header />
-      <Blogs />
+      <BlogLayout   
+        blogType={`main`}
+      />
       <Footer />
     </>
   )
