@@ -2,7 +2,7 @@ import React from 'react'
 import BlogMainTitle from './BlogMainTitle.js'
 import NormalButton from '../../../Components/Button/NormalButton'
 
-function Tag() {
+function Tag({isVisible}) {
   const tagData = [
     {ID: 1 , tags: 'Healthy'},
     {ID: 2 , tags: 'Low fat'},
@@ -19,9 +19,13 @@ function Tag() {
   
   return (
     <div className={`flex justify-start items-start flex-col min-w-full gap-2`}>
-        <BlogMainTitle 
-          Title={'Popular Tag'}
-        />
+        {
+          !isVisible && (
+            <BlogMainTitle 
+              Title={'Popular Tag'}
+            />
+          )
+        }
         <div className={`flex flex-wrap  min-w-full gap-2 `}>
            {
             tagData.map((item, index) => {

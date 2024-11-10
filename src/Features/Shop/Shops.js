@@ -3,7 +3,7 @@ import NavigationMenu from '../../Components/Navigation/Menu/NavigationMenu'
 import BlogTop from '../Blogs/Components/BlogTop';
 import ProductFilter from './Components/ProductFilter';
 import Products from './Components/Products';
-
+import Pagination from './Components/Product/Pagination'
 
 function Shops() {
     const [deviceSize, setDeviceSize] = useState(window.innerWidth <= 768);
@@ -36,6 +36,9 @@ function Shops() {
             <div className={`min-w-full grid  grid-cols-12 gap-16 min-h-96 m-0 mt-10`}>
                 <ProductFilter />
                 <Products />
+            </div>
+            <div className={`grid grid-cols-12 min-w-full`}>
+                <Pagination />
             </div>
         </div>
     </section>

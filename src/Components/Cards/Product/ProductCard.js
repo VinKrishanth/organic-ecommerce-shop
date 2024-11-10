@@ -23,7 +23,7 @@ function ProductCard({ cardTitle, discountPrice, Price, offer, cardSourceAlt, ca
 
   return (
     <div 
-      className={`min-w-full min-h-full border-2 relative transition-all duration-500 ease-linear delay-75 ${textHover ? 'border-Primary shadow-Primary' : 'border-Gray05'} overflow-hidden`}
+      className={`min-w-full min-h-full border-2 relative transition-all duration-500 ease-linear delay-75 ${textHover ? 'border-Primary shadow-Primary' : 'border-Gray05'} transition-all duration-700 ease-linear delay-100 overflow-hidden`}
       onMouseOut={() => setTextHover(false)}
       onMouseOver={() => setTextHover(true)}
       id={productID}

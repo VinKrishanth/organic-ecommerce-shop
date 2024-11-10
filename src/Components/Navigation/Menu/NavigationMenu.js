@@ -26,7 +26,10 @@ function NavigationMenu({pageName, subNav}) {
                 <figure className={`min-h-6 min-w-6 flex justify-center items-center`}>
                     <img src={ArrowRight} alt='The arrow right icon' className={`object-cover items-center`} />
                 </figure>
-                <h2 className={`text-sm leading-6 tracking-normal text-left align-top text-Primary hover:scale-110 duration-700 ease-linear delay-100 cursor-pointer`}>{pageName}</h2>
+                <h2 
+                    className={`text-sm leading-6 tracking-normal text-left align-top text-Primary hover:scale-110 duration-700 ease-linear delay-100 cursor-pointer`}
+                    id='navProductPage'
+                >{pageName}</h2>
             </div>
         </div>
     </div>

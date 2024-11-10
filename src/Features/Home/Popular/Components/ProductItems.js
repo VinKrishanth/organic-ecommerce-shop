@@ -16,7 +16,8 @@ const ProductItems =[
         cardSourceURL : GreenApple,
         btnLabel : 'Sale 50%',
         viewRate : 5, 
-        isVisible: true
+        isVisible: true,
+        isFruit: true
     },
     {
         productID :'cardP2',
@@ -28,7 +29,8 @@ const ProductItems =[
         cardSourceURL : FreshIndianMalta,
         btnLabel : false,
         viewRate : 4, 
-        isVisible: true
+        isVisible: true,
+        isFruit: true
     },
     {
         productID :'cardP3',
