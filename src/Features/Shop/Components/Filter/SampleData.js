@@ -49,6 +49,14 @@ const SampleData = [
     },
     {
         ID: 'fcd7',
+        CategoryName: 'Yogurt & Ice Cream',
+        ProductCount: '15',
+        isDataChecked: false,
+        ProductID:'product',
+        name: 'IceCream'
+    },
+    {
+        ID: 'fcd8',
         CategoryName: 'Vegetables',
         ProductCount: '150',
         isDataChecked: true,

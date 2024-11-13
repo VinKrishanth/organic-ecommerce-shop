@@ -3,7 +3,7 @@ import NavigationMenu from '../../Components/Navigation/Menu/NavigationMenu'
 import BlogTop from '../Blogs/Components/BlogTop';
 import ProductFilter from './Components/ProductFilter';
 import Products from './Components/Products';
-import Pagination from './Components/Product/Pagination'
+import Pagination from '../../Features/Account/OrderHistory/Btn/Pagination'
 
 function Shops() {
     const [deviceSize, setDeviceSize] = useState(window.innerWidth <= 768);
@@ -37,8 +37,14 @@ function Shops() {
                 <ProductFilter />
                 <Products />
             </div>
-            <div className={`grid grid-cols-12 min-w-full`}>
-                <Pagination />
+            <div className={`grid grid-cols-12 min-w-full mt-8`}>
+                <div className='flex min-w-full justify-start items-start col-span-12'>
+                    <div className='grid grid-cols-1 min-w-full'>
+                        <div className='flex justify-center items-center col-span-1'>
+                            <Pagination />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
