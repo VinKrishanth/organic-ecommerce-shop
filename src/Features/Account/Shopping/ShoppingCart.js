@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import DashboardMain from '../../../Containers/DashboardMain';
+import ShoppingInfo from './Components/ShoppingInfo';
+import CouponCode from './Components/CouponCode';
+import CartTotal from './Components/CartTotal';
 
 function ShoppingCart() {
     const [deviceSize, setDeviceSize] = useState(window.innerWidth <= 768);
@@ -12,7 +14,7 @@ function ShoppingCart() {
 
     const customerStyle = {
         container: 'flex',
-        dxl: '2xl:px-16 pt-8',
+        dxl: '2xl:px-16 pt-16  ',
         xl: 'xl:',
         lg: 'lg:min-w-screen ',
         md: ' ',
@@ -22,13 +24,21 @@ function ShoppingCart() {
     
   return (
     <section  className={`${customerStyle.container} ${customerStyle.dxl} ${customerStyle.xl} ${customerStyle.lg} ${customerStyle.md} ${customerStyle.sm} ${customerStyle.base} flex gap-8`}>
-      <div className={`min-w-[312px]`}>
-        <DashboardMain />
-      </div> 
-      <div className={`flex-grow grid grid-cols-9 gap-4`}>
-
+    <div className={`flex flex-col min-w-full justify-start items-start min-h-96 `}>
+      <div className={`flex justify-center items-center min-w-full pb-16`}>
+        <h1 className={`text-3xl tracking-normal leading-6 font-semibold align-top text-center capitalize hover:scale-110 transition-all duration-700 ease-linear delay-200 cursor-pointer`}>My Shopping Cart</h1>
       </div>
-    </section>
+      <div className={`grid grid-cols-12 justify-start items-start gap-16 min-w-full`}>
+          <div className={`flex flex-col justify-start items-start col-span-8 gap-4 min-w-full`}>
+            <ShoppingInfo />
+            <CouponCode />
+          </div>
+          <div className={`flex justify-start items-start col-span-4`}>
+            <CartTotal />
+          </div>
+      </div>
+    </div>
+  </section>
   )
 }
 

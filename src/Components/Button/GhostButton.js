@@ -6,11 +6,11 @@ function GhostButton({onClick ,minHight, minWidth, textSize, label, textHover, b
     const [buttonHover, setButtonHover] = useState(false);
     const CustomerStyle = {
         smBtnFull: `${minWidth ? minWidth: '2xl:min-w-[102px]'}  ${minHight ? minHight : 'min-h-8'} ${textSize ? textSize : 'text-xs'}  bg-HardPrimary bg-opacity-10  
-        ${textHover || textHoverPro ? 'text-black hover:bg-Primary hover:text-white ' : 'hover:bg-opacity-20 hover:text-PrimaryHover hover:text-opacity-100 hover:bg-HardPrimaryHover text-Primary text-opacity-100 '} ${btnStyle}`,
+        ${btnStyle ? ' bg-Gray05 text-Gray90 px-4 hover:text-white hover:bg-textBright' : `${textHover || textHoverPro ? 'text-black hover:bg-Primary hover:text-white ' : 'hover:bg-opacity-20 hover:text-PrimaryHover hover:text-opacity-100 hover:bg-HardPrimaryHover text-Primary text-opacity-100 '}`}`,
       }
       return (
         <button 
-          className={`flex justify-center items-center   rounded-full  font-semibold leading-tight tracking-normal align-top  transition-all duration-300 ease-linear  ${CustomerStyle.smBtnFull}`}
+          className={`flex justify-center items-center   rounded-full  font-semibold leading-tight tracking-normal align-top  transition-all duration-700 ease-linear  ${CustomerStyle.smBtnFull}  `}
           onClick={onClick}
           onMouseOut={()=>{setButtonHover(false)}}
           onMouseOver={()=>{setButtonHover(true)}}
