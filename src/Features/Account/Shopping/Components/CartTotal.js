@@ -1,7 +1,9 @@
 import React from 'react'
 import NormalButton from '../../../../Components/Button/NormalButton'
+import { useSelector } from 'react-redux'
 
 function CartTotal() {
+    const cartTotal = useSelector(state => state.cart.cartTotalPrice);
     const handleCheckout = () =>{
 
     }
@@ -14,7 +16,7 @@ function CartTotal() {
             <ul className={`flex flex-col justify-items-start text-left leading-6 tracking-normal gap-4`}>
                 <li className={`flex justify-between items-center min-w-full border-b-2 pb-2`}>
                     <h2 className={`text-sm font-normal text-Gray70 cursor-pointer capitalize`}>subtotal:</h2>
-                    <p className={`text-sm font-medium text-Gray90 cursor-pointer capitalize`}>${parseFloat(100).toFixed(2)}</p>
+                    <p className={`text-sm font-medium text-Gray90 cursor-pointer capitalize`}>${parseFloat(cartTotal).toFixed(2)}</p>
                 </li>
                 <li className={`flex justify-between items-center min-w-full border-b-2 pb-2`}>
                     <h2 className={`text-sm font-normal text-Gray70 cursor-pointer capitalize`}>Shipping:</h2>
@@ -22,7 +24,7 @@ function CartTotal() {
                 </li>
                 <li className={`flex justify-between items-center min-w-full border-b-2 pb-2`}>
                     <h2 className={`text-base font-normal text-Gray70 cursor-pointer capitalize`}>Total:</h2>
-                    <p className={`text-base font-semibold text-Gray90 cursor-pointer capitalize`}>${parseFloat(100).toFixed(2)}</p>
+                    <p className={`text-base font-semibold text-Gray90 cursor-pointer capitalize`}>${parseFloat(cartTotal).toFixed(2)}</p>
                 </li>
             </ul>
         </div>

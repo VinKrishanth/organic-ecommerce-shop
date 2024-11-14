@@ -14,6 +14,8 @@ const cartSlice = createSlice({
 
             if(existingItems){
               existingItems.cartTotalPrice += newItem.Price;
+              existingItems.quantity++;
+              existingItems.totalPrice += existingItems.Price;
             }else{
               state.itemsList.push({
                 name: newItem.name,
@@ -25,6 +27,7 @@ const cartSlice = createSlice({
                 totalPrice: newItem.Price
               });
               state.totalQuantity++;
+              state.cartTotalPrice += newItem.Price;
             }
         },
         removerFormCart(state, action){

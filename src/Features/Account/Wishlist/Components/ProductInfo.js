@@ -2,17 +2,20 @@ import React, { useState } from 'react'
 import NormalButton from '../../../../Components/Button/NormalButton'
 import PriceText from '../../../../Components/Text/PriceText'
 import {closeNormalSource, closeHoverSource} from '../../../../assets/Shop/index.js'
+import { useNavigate } from 'react-router-dom'
 
-function ProductInfo({sourceURL, productName, productPrice, isStockStatus ,index}) {
+function ProductInfo({sourceURL, productName, productPrice, isStockStatus ,index, id}) {
     const [textHover, setTextHover] = useState(false);
+    const navigate = useNavigate();
     const handelClick = () =>{
-
+        navigate(`/organic-ecommerce-shop/my-account/shopping-cart`);
     } 
     const handleClose = () =>{
 
     }
   return (
     <tr
+        id={id}
         key={index}
         className={`grid grid-cols-12 min-w-full min-h-10 text-sm font-medium tracking-wide leading-4 text-left align-top capitalize  text-Gray40 py-4 border-b-2`}
     >
