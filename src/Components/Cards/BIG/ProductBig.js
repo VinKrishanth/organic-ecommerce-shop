@@ -19,7 +19,7 @@ function ProductBig() {
             <h2 className='sm:text-lg font-normal leading-5 tracking-normal text-center align-top text-Primary hover:translate-x-2 transition-all duration-500 ease-linear delay-100'>Chinese cabbage</h2>
             <PriceText  
              Price={12}
-             discountPrice={`$24`}
+             discountPrice={24}
              textSize={`sm:text-2xl`}
             />
             <Stars 

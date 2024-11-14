@@ -10,6 +10,7 @@ import TagsButton from '../../Button/TagsButton';
 import WishlistButton from '../../Button/WishlistButton';
 import QuickViewButton from '../../Button/QuickViewButton';
 import Stars from '../../Star/Stars';
+import { useNavigate } from 'react-router-dom'
 
 import {
   handleClickCard,
@@ -17,16 +18,32 @@ import {
   handleClickWishlist,
   handleClickQuickView
 } from '../../Js/productCardFunctions'; 
+import { useDispatch } from 'react-redux';
+import { cartActions } from '../../../reducer/cart-slice';
 
-function ProductCard({ cardTitle, discountPrice, Price, offer, cardSourceAlt, cardSourceURL, btnLabel, viewRate , productID }) {
+function ProductCard({ name, discountPrice, Price, offer, cardSourceAlt, sourceURL, btnLabel, viewRate , id , stock}) {
+  const navigate = useNavigate();
   const [textHover, setTextHover] = useState(false);
+  const dispatch = useDispatch();
 
+  const handelCartClick = () =>{
+    dispatch(cartActions.addToCart({
+      name,
+      Price,
+      stock,
+      sourceURL,
+      id
+    }));
+
+    navigate(`/organic-ecommerce-shop/my-account/wishlist`);
+    console.log(`item cart is click`);
+  }
   return (
     <div 
       className={`min-w-full min-h-full border-2 relative transition-all duration-500 ease-linear delay-75 ${textHover ? 'border-Primary shadow-Primary' : 'border-Gray05'} transition-all duration-700 ease-linear delay-100 overflow-hidden`}
       onMouseOut={() => setTextHover(false)}
       onMouseOver={() => setTextHover(true)}
-      id={productID}
+      id={id}
     >
       {offer && (
         <TagsButton 
@@ -54,10 +71,10 @@ function ProductCard({ cardTitle, discountPrice, Price, offer, cardSourceAlt, ca
         )
       }
       <figure className='flex justify-center items-center min-w-full cursor-pointer hover:scale-105 transition-all duration-500 ease-linear'>
-        <img src={cardSourceURL} alt={cardSourceAlt} className='object-cover object-center' />
+        <img src={sourceURL} alt={cardSourceAlt} className='object-cover object-center' />
       </figure>
       <div className='relative p-4'>
-        <h1 className={`text-sm leading-5 tracking-normal font-normal text-left align-top cursor-pointer ${textHover && 'text-Primary'}`}>{cardTitle}</h1>
+        <h1 className={`text-sm leading-5 tracking-normal font-normal text-left align-top cursor-pointer ${textHover && 'text-Primary'}`}>{name}</h1>
         <PriceText 
           Price={Price}
           discountPrice={discountPrice}
@@ -73,7 +90,7 @@ function ProductCard({ cardTitle, discountPrice, Price, offer, cardSourceAlt, ca
           Icon={BagBlack}
           HoverIcon={BagWhite}
           cardStyle='absolute right-4 top-4 z-20 scale-75 hover:translate-y-2 transition-all duration-500 ease-linear'
-          onClick={() => handleClickCard(Price, cardTitle, cardSourceURL, productID)}
+          onClick={() => handelCartClick()}
         />
       </div>
     </div>
@@ -82,12 +99,13 @@ function ProductCard({ cardTitle, discountPrice, Price, offer, cardSourceAlt, ca
 
 
 ProductCard.propTypes = {
-  cardTitle: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   Price: PropTypes.number.isRequired,
   offer: PropTypes.bool.isRequired,
   cardSourceAlt: PropTypes.string.isRequired,
-  cardSourceURL: PropTypes.string.isRequired,
+  sourceURL: PropTypes.string.isRequired,
   viewRate: PropTypes.number.isRequired,
+  id:PropTypes.string.isRequired
 };
 
 export default ProductCard;

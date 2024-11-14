@@ -9,7 +9,7 @@ const ProductItems =[
     {
         productID :'cardP1',
         cardTitle : 'Green Apple',
-        discountPrice : `$20.99`,
+        discountPrice : 20.99,
         Price : 14.99,
         offer : true,
         cardSourceAlt : 'The Product information', 
@@ -17,7 +17,8 @@ const ProductItems =[
         btnLabel : 'Sale 50%',
         viewRate : 5, 
         isVisible: true,
-        isFruit: true
+        isFruit: true,
+        stock: `In Stock`
     },
     {
         productID :'cardP2',
@@ -30,7 +31,8 @@ const ProductItems =[
         btnLabel : false,
         viewRate : 4, 
         isVisible: true,
-        isFruit: true
+        isFruit: true,
+        stock: `In Stock`
     },
     {
         productID :'cardP3',
@@ -42,6 +44,7 @@ const ProductItems =[
         cardSourceURL : ChineseCabbage,
         btnLabel : false,
         viewRate : 4, 
+        stock: `In Stock`
     },
     {
         productID :'cardP4',
@@ -53,6 +56,7 @@ const ProductItems =[
         cardSourceURL : GreenLettuce,
         btnLabel : false,
         viewRate : 5, 
+        stock: `In Stock`
     },
     {
         productID :'cardP5',
@@ -63,7 +67,8 @@ const ProductItems =[
         cardSourceAlt : 'The Product information', 
         cardSourceURL : Eggplant,
         btnLabel : false,
-        viewRate : 5, 
+        viewRate : 5,
+        stock: `In Stock` 
     },
     {
         productID :'cardP6',
@@ -75,6 +80,7 @@ const ProductItems =[
         cardSourceURL : BigPotatoes,
         btnLabel : false,
         viewRate : 4, 
+        stock: `In Stock`
     },
     {
         productID :'cardP7',
@@ -86,6 +92,7 @@ const ProductItems =[
         cardSourceURL : Corn,
         btnLabel : false,
         viewRate : 4, 
+        stock: `In Stock`
     },
     {
         productID :'cardP8',
@@ -97,17 +104,19 @@ const ProductItems =[
         cardSourceURL : FreshCauliflower,
         btnLabel : false,
         viewRate : 4, 
+        stock: `In Stock`
     },
     {
         productID :'cardP9',
         cardTitle : 'Green Capsicum',
-        discountPrice : `$20.99`,
+        discountPrice: 20.99,
         Price : 9.99,
         offer : true,
         cardSourceAlt : 'The Product information', 
         cardSourceURL : GreenCapsicum,
         btnLabel : 'Sale 50%',
         viewRate : 5, 
+        stock: `In Stock`
     },
     {
         productID :'cardP10',
@@ -119,6 +128,7 @@ const ProductItems =[
         cardSourceURL : GreenChili,
         btnLabel : false,
         viewRate : 5, 
+        stock: `In Stock`
     },
     {
         productID :'cardP11',
@@ -130,7 +140,8 @@ const ProductItems =[
         cardSourceURL : RedChili,
         btnLabel : false,
         viewRate : 4, 
-        isNew: true
+        isNew: true,
+        stock: `In Stock`
     },
     {
         productID :'cardP12',
@@ -142,7 +153,8 @@ const ProductItems =[
         cardSourceURL : RedTomatos,
         btnLabel : 'Sale 50%',
         viewRate : 3, 
-        isNew: true
+        isNew: true,
+        stock: `In Stock`
     },
     {
         productID :'cardP13',
@@ -154,7 +166,8 @@ const ProductItems =[
         cardSourceURL : SurjapurMango,
         btnLabel : false,
         viewRate : 5, 
-        isNew: true
+        isNew: true,
+        stock: `In Stock`
     },
 ]
 export default ProductItems

@@ -1,16 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from '../Pages/Auth/Login';
-
 import { Home, Shop, Blog, Pages, About, Contact, Product,SingleBlogs } from '../Pages';
 import { Fruit, Vegetables, Fish, Meat, Drink, IceCream, Bread, Butter, Cooking ,TrackOrder} from '../Pages/Categories';
 import {BeautyAndHealth , BreadAndBakery, FruitVegetable, MeatAndFish} from '../Pages/shops'
 import {Cart, MyAccount, OrderHistory, Wishlist, Setting,OrderDetails} from '../Pages/Account'
-import {Faqs, Policy, Terms} from '../Pages/Helps'
+import {Faqs, Policy, Terms} from '../Pages/Helps';
+import ScrollToTop from '../Containers/ScrollToTop';
 
 function Layouts() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/organic-ecommerce-shop/shop" element={<Shop />} />

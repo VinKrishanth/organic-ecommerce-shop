@@ -15,14 +15,15 @@ function Products() {
                                 <ProductCard 
                                     Price={item.Price}
                                     cardSourceAlt={item.cardSourceAlt}
-                                    cardSourceURL={item.cardSourceURL}
-                                    cardTitle={item.cardTitle}
+                                    sourceURL={item.cardSourceURL}
+                                    name={item.cardTitle}
                                     discountPrice={item.discountPrice}
                                     offer={item.offer}
-                                    productID={item.productID}
+                                    id={item.productID}
                                     viewRate={item.viewRate}
                                     btnLabel={item.btnLabel}
                                     key={item.productID}
+                                    stock={item.stock}
                                 />
                             </div>
                         </div>
