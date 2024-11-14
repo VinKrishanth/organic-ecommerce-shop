@@ -17,8 +17,8 @@ function ProductBodyInfo() {
     const handleRemoveToCart = (item)=>{
         dispatch(cartActions.removerFormCart(item.id));
     }
-    const handleClose = () =>{
-          
+    const handleClose = (item) =>{
+        dispatch(cartActions.deleteFormCart(item.id));
     }
     const handleBackToHome = () =>{
         navigate('/organic-ecommerce-shop/shop')
@@ -74,7 +74,7 @@ function ProductBodyInfo() {
                             <th className={`flex justify-between items-center col-span-2 cursor-pointer`}>
                                 <p className={`text-base font-medium tracking-normal leading-6 align-top cursor-pointer text-Gray90`}>${parseFloat(item.totalPrice).toFixed(2)}</p>
                                 <figure 
-                                onClick={()=>{handleClose()}}
+                                onClick={()=>{handleClose(item)}}
                                 onMouseOver={()=>{setTextHover(index)}}
                                 onMouseOut={()=>{setTextHover(false)}}
                                 className={`min-h-6 min-w-6 bg-Gray05 rounded-full text-xs cursor-pointer `}

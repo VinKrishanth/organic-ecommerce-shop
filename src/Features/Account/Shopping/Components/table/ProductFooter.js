@@ -1,9 +1,11 @@
 import React from 'react'
 import GhostButton from '../../../../../Components/Button/GhostButton'
+import { useNavigate } from 'react-router-dom'
 
 function ProductFooter() {
+    const navigate = useNavigate();
     const handleReturnShop = () => {
-
+        navigate('/organic-ecommerce-shop/shop')
     }
     const handleUpdateCart = () => {
 

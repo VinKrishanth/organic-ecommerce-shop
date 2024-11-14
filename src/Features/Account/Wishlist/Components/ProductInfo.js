@@ -2,16 +2,19 @@ import React, { useState } from 'react'
 import NormalButton from '../../../../Components/Button/NormalButton'
 import PriceText from '../../../../Components/Text/PriceText'
 import {closeNormalSource, closeHoverSource} from '../../../../assets/Shop/index.js'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { cartActions } from '../../../../reducer/cart-slice.js';
 
 function ProductInfo({sourceURL, productName, productPrice, isStockStatus ,index, id}) {
     const [textHover, setTextHover] = useState(false);
+    const dispatch = useDispatch();
     const navigate = useNavigate();
     const handelClick = () =>{
         navigate(`/organic-ecommerce-shop/my-account/shopping-cart`);
     } 
     const handleClose = () =>{
-
+        dispatch(cartActions.removerFormCart(id));
     }
   return (
     <tr

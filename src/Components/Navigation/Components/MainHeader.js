@@ -18,6 +18,7 @@ function MainHeader({toggleMenu}) {
           <Logo />
           <TextInputSearch 
             deviceSize={deviceSize}
+            placeholder={false}
           />
           <Payment 
             display={true}

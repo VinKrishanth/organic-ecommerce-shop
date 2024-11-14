@@ -11,6 +11,8 @@ function CouponCode() {
                     placeholder={`Enter code`}
                     inputIcon={true}
                     inputStyle={true}
+                    label={`Apply Coupon`}
+                    searchStyle={true}
                 />
             </div>
         </div>

@@ -3,7 +3,7 @@ import Search from '../../assets/Header/Search.svg'
 import SearchGreen from '../../assets/Header/Search-green.svg'
 import SearchButton from '../Button/SearchButton'
 
-function TextInputSearch({deviceSize, isVisible, customerStyle, placeholder, inputIcon, inputStyle}) {
+function TextInputSearch({deviceSize, isVisible, customerStyle, placeholder, inputIcon, inputStyle, label,searchStyle}) {
     const [textHover, setTextHover] = useState(false);
     const [formData, setFormData] = useState('');
     const handleClick = () =>{
@@ -33,8 +33,8 @@ function TextInputSearch({deviceSize, isVisible, customerStyle, placeholder, inp
                                     MouseOut= {()=>{setTextHover(true)}}
                                     MouseOver = {()=>{setTextHover(false)}}
                                     textHover={textHover}
-                                    searchStyle={true}
-                                    label={`Apply Coupon`}
+                                    searchStyle={searchStyle}
+                                    label={label}
                                 />
             }
             

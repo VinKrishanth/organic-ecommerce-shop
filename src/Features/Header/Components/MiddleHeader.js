@@ -7,7 +7,10 @@ function MiddleHeader() {
   return (
     <div className={`flex justify-between items-center min-h-24`}>
         <Logo />
-        <TextInputSearch />
+        <TextInputSearch 
+          placeholder={false}
+          searchStyle={false}
+        />
         <Call />
     </div>
   )
