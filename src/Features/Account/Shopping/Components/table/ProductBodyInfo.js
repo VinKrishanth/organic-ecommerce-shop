@@ -31,8 +31,8 @@ function ProductBodyInfo() {
             itemsList.length === 0 ? (
                 <>
                     <tr className={`flex flex-col justify-center items-center min-w-full min-h-[400px] gap-8`}>
-                        <td className={`flex justify-center items-center text-5xl font-medium tracking-wide cursor-pointer uppercase`}>
-                            Please add the cart first
+                        <td className={`flex justify-center items-center text-xl font-medium tracking-wide cursor-pointer  text-Gray50 text-center max-w-[75%]`}>
+                            Your wishlist is empty. Add items to start building your favorites!
                         </td>
                         <td 
                             onClick={()=>{handleBackToHome()}}
