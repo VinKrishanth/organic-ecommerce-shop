@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import TextInput from '../../../../Components/Input/TextInput'
 import SubmitButton from '../Btn/SubmitButton';
 
-function Billing() {
+function Billing({isVisibleSaveButton, billingStyle}) {
     const [formData, setFormData]= useState({
         firstName: '',
         lastName: '',
@@ -28,7 +28,7 @@ function Billing() {
       }
     
       return (
-        <div className={`flex col-span-9 min-h-[352px] p-8`}>
+        <div className={`flex  min-h-[352px] ${billingStyle ? ' min-w-full p-0' : 'col-span-9 p-8 '}`}>
           <form onSubmit={handleSubmit} className={`min-w-full`}>
               <div className={`flex flex-col justify-start items-start min-w-full gap-4`}>
                   <div className='min-w-full grid grid-cols-3 gap-4'>
@@ -128,9 +128,15 @@ function Billing() {
                         key={9}
                       />
                   </div>
-                <SubmitButton 
-                Title={`Save Changes`}
-                />
+
+                  {
+                    !isVisibleSaveButton && (
+<                     SubmitButton 
+                        Title={`Save Changes`}
+                      />
+                    )
+                  }
+                
               </div>
           </form>
         </div>

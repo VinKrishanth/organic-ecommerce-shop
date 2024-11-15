@@ -4,7 +4,7 @@ import Login from '../Pages/Auth/Login';
 import { Home, Shop, Blog, Pages, About, Contact, Product,SingleBlogs } from '../Pages';
 import { Fruit, Vegetables, Fish, Meat, Drink, IceCream, Bread, Butter, Cooking ,TrackOrder} from '../Pages/Categories';
 import {BeautyAndHealth , BreadAndBakery, FruitVegetable, MeatAndFish} from '../Pages/shops'
-import {Cart, MyAccount, OrderHistory, Wishlist, Setting,OrderDetails} from '../Pages/Account'
+import {Cart, MyAccount, OrderHistory, Wishlist, Setting,OrderDetails, Checkout} from '../Pages/Account'
 import {Faqs, Policy, Terms} from '../Pages/Helps';
 import ScrollToTop from '../Containers/ScrollToTop';
 
@@ -43,6 +43,7 @@ function Layouts() {
         <Route path="/organic-ecommerce-shop/my-account" element={<MyAccount />} />
         <Route path="/organic-ecommerce-shop/my-account/order-history" element={<OrderHistory />} />
         <Route path="/organic-ecommerce-shop/my-account/shopping-cart" element={<Cart />} />
+        <Route path="/organic-ecommerce-shop/my-account/shopping-cart/checkout" element={<Checkout />} />
         <Route path="/organic-ecommerce-shop/my-account/wishlist" element={<Wishlist />} />
         <Route path="/organic-ecommerce-shop/my-account/setting" element={<Setting />} />
         <Route path="/organic-ecommerce-shop/my-account/order-history/order-details" element={<OrderDetails />} />

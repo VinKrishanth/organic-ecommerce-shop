@@ -47,7 +47,11 @@ function ProductBodyInfo() {
                     return(
                         <tr key={index}  className={`grid grid-cols-8 items-center min-w-full ${itemsList.length === (index + 1) ? 'border-b-0' : 'border-b-2' }  pb-4`}>
                             <th className={`flex justify-start items-center col-span-3 cursor-pointer gap-4`}>
-                                <img src={item.sourceURL || ``} alt='The product information' className={`object-cover object-center max-h-[70px] max-w-[70px] cursor-pointer`} />
+                                <img 
+                                    src={item.sourceURL || ``} 
+                                    alt='The product information' 
+                                    className={`object-cover object-center max-h-[70px] max-w-[70px] cursor-pointer`} 
+                                />
                                 <p className={`text-base capitalize font-normal leading-6 tracking-normal text-Gray90 cursor-pointer`}>{'Green Capsicum '|| ``}</p>                 
                             </th>
                             <td className={`flex justify-between items-center col-span-1 cursor-pointer text-base font-normal tracking-normal leading-6 align-top  text-Gray90`}>
@@ -59,7 +63,11 @@ function ProductBodyInfo() {
                                         onClick={()=>{handleRemoveToCart(item)}}
                                         className={`flex justify-center items-center min-h-8 min-w-8 bg-Gray05 rounded-full`}
                                     >
-                                        <img src={textHover === index ? minusBlackSource : minusNormalSource} alt='The minus Source' className='object-cover object-center' />
+                                        <img 
+                                            src={textHover === index ? minusBlackSource : minusNormalSource} 
+                                            alt='The minus Source' 
+                                            className='object-cover object-center' 
+                                        />
                                     </li>
                                     <li 
                                         className={`flex justify-center items-center min-h-8 min-w-8 text-base font-normal tracking-normal leading-6`}>{String(item.quantity).padStart(2, 0)}</li>
@@ -79,7 +87,11 @@ function ProductBodyInfo() {
                                 onMouseOut={()=>{setTextHover(false)}}
                                 className={`min-h-6 min-w-6 bg-Gray05 rounded-full text-xs cursor-pointer `}
                                 >
-                                <img src={textHover === index ? closeHoverSource: closeNormalSource} alt={`The close source`} className={`object-center object-cover`} />
+                                <img 
+                                    src={textHover === index ? closeHoverSource: closeNormalSource} 
+                                    alt={`The close source`} 
+                                    className={`object-center object-cover`} 
+                                />
                                 </figure>
                             </th>
                         </tr>

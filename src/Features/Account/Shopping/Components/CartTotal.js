@@ -1,11 +1,13 @@
 import React from 'react'
 import NormalButton from '../../../../Components/Button/NormalButton'
 import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
 function CartTotal() {
+    const navigate = useNavigate();
     const cartTotal = useSelector(state => state.cart.cartTotalPrice);
     const handleCheckout = () =>{
-
+        navigate(`/organic-ecommerce-shop/my-account/shopping-cart/checkout`);
     }
   return (
     <div className={`flex flex-col justify-start items-start gap-6 border-2 border-opacity-50 min-w-full rounded-xl p-8 hover:p-10 hover:border-opacity-100 transition-all duration-1000 ease-linear delay-300 cursor-pointer`}>
