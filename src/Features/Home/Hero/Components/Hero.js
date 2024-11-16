@@ -3,7 +3,7 @@ import IconButton from '../../../../Components/Button/IconButton'
 import {ArrowRightGreen} from '../../../../assets/Product/Blog/BlogItems.js'
 import PropType from 'prop-types';
 
-function Hero({HeroImageCollection, Title, subTitle}) {
+function Hero({HeroImageCollection, Title, subTitle, addStyle}) {
   const [deviceSize, setDeviceSize] = useState(window.innerWidth <= 768);
     
   useEffect(() => {
@@ -49,7 +49,7 @@ function Hero({HeroImageCollection, Title, subTitle}) {
   return (
     <div className={`flex-grow flex justify-start items-center md:p-16 sm:p-8  p-4 2xl:min-h-[560px] min-w-full relative`}>
         <div className={`flex flex-col  text-left align-top lg:gap-8 sm:gap-6 gap-2 z-20`}>
-            <h1 className={`lg:text-5xl  sm:text-3xl text-sm font-semibold  tracking-normal text-white sm:max-w-[75%] max-w-[80%] cursor-pointer hover:-translate-x-8  hover:scale-90 duration-700 ease-linear delay-200`}>{Title}</h1>
+            <h1 className={`lg:text-5xl  sm:text-3xl text-sm font-semibold  tracking-normal text-white sm:max-w-[75%] ${addStyle ? 'max-w-[75%] ' : 'max-w-[80%] '}  cursor-pointer hover:-translate-x-8  hover:scale-90 duration-700 ease-linear delay-200 `}>{Title}</h1>
             <p className={`lg:text-2xl  sm:text-lg text-xs font-medium  tracking-wide text-white text-opacity-60  hover:text-opacity-100  sm:border-l-4 md:pl-4 border-l-2 pl-2 lg:max-w-[25%] max-w-[40%] align-top  cursor-pointer`}>Sale Up to  <span className={`text-white text-opacity-100 hover:text-Warning`}>{subTitle}% </span> off</p>
                 {
                   deviceSize ? (

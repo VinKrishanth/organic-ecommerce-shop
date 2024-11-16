@@ -1,6 +1,7 @@
 import React, {useEffect, useState } from 'react'
 import HeroDefault from '../../Home/Hero/HeroDefault';
 import HeroSource from './Components/HeroSource.js';
+import HomeContent from '../../../Containers/HomeContent.js';
 
 
 function IceCreams() {
@@ -27,13 +28,15 @@ function IceCreams() {
       <div className={`flex justify-start items-start min-w-full`}>
         <HeroDefault 
           HeroSourceTitle={HeroSource} 
-          mainHeading={`Fresh & Healthy Organic Food`} 
-          subHeading={`30%`}
+          mainHeading={`Sweet Memories of Classic Ice Creams`} 
+          subHeading={`30`}
+          addStyle={true}
         />
       </div>
       <div  className={`${customerStyle.container} ${customerStyle.dxl} ${customerStyle.xl} ${customerStyle.lg} ${customerStyle.md} ${customerStyle.sm} ${customerStyle.base}`}>
-      
+
       </div>
+      <HomeContent />
     </div>
   )
 }

@@ -6,7 +6,7 @@ import PropType from 'prop-types';
 
 export const UserContext = createContext();
 
-function HeroDefault({HeroSourceTitle, mainHeading, subHeading}) {
+function HeroDefault({HeroSourceTitle, mainHeading, subHeading, addStyle}) {
     const [deviceSize, setDeviceSize] = useState(window.innerWidth <= 768);
     
     useEffect(() => {
@@ -33,6 +33,7 @@ function HeroDefault({HeroSourceTitle, mainHeading, subHeading}) {
                     HeroImageCollection={HeroSourceTitle}
                     Title={mainHeading}
                     subTitle={subHeading}
+                    addStyle={addStyle}
                 />
             </div>
             <Feature />

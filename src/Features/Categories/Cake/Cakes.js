@@ -1,6 +1,6 @@
 import React, {useEffect, useState } from 'react'
 import HeroDefault from '../../Home/Hero/HeroDefault';
-import HeroSource from '../IceCream/Components/HeroSource.js';
+import HeroSource from './Components/HeroSource.js';
 
 
 function Cakes() {

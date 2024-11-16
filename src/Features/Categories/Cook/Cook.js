@@ -1,6 +1,7 @@
 import React, {useEffect, useState } from 'react'
 import HeroDefault from '../../Home/Hero/HeroDefault';
-import HeroSource from '../IceCream/Components/HeroSource.js';
+import HeroSource from './Components/HeroSource.js';
+import HomeContent from '../../../Containers/HomeContent.js';
 
 
 function Cook() {
@@ -34,6 +35,7 @@ function Cook() {
       <div  className={`${customerStyle.container} ${customerStyle.dxl} ${customerStyle.xl} ${customerStyle.lg} ${customerStyle.md} ${customerStyle.sm} ${customerStyle.base}`}>
       
       </div>
+      <HomeContent />
     </div>
   )
 }

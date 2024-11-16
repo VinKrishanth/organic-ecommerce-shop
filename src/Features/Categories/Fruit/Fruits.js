@@ -1,6 +1,7 @@
 import React, {useEffect, useState } from 'react'
 import HeroDefault from '../../Home/Hero/HeroDefault';
-import HeroSource from '../IceCream/Components/HeroSource.js';
+import HeroSource from './Components/HeroSource.js';
+import HomeContent from '../../../Containers/HomeContent.js';
 
 function Fruits() {
   const [deviceSize, setDeviceSize] = useState(window.innerWidth <= 768);
@@ -26,13 +27,14 @@ function Fruits() {
       <div className={`flex justify-start items-start min-w-full`}>
         <HeroDefault 
           HeroSourceTitle={HeroSource} 
-          mainHeading={`Fresh & Healthy Organic Food`} 
+          mainHeading={`Fresh & Healthy Organic Fruit`} 
           subHeading={`30%`}
         />
       </div>
       <div  className={`${customerStyle.container} ${customerStyle.dxl} ${customerStyle.xl} ${customerStyle.lg} ${customerStyle.md} ${customerStyle.sm} ${customerStyle.base}`}>
       
       </div>
+      <HomeContent />
     </div>
   )
 }
