@@ -2,10 +2,11 @@ import React, { createContext, useEffect, useState } from 'react'
 import SideBars from './Components/SideBars';
 import Hero from './Components/Hero';
 import Feature from './Components/Feature';
+import PropType from 'prop-types';
 
 export const UserContext = createContext();
 
-function HeroDefault() {
+function HeroDefault({HeroSourceTitle, mainHeading, subHeading}) {
     const [deviceSize, setDeviceSize] = useState(window.innerWidth <= 768);
     
     useEffect(() => {
@@ -28,7 +29,11 @@ function HeroDefault() {
         <section id='heroMain' className={`${customerStyle.container} ${customerStyle.dxl} ${customerStyle.xl} ${customerStyle.lg} ${customerStyle.md} ${customerStyle.sm} ${customerStyle.base} `}>
             <div className='flex justify-start items-start min-w-full  2xl:flex-row flex-col  gap-8'>
                 <SideBars />
-                <Hero />
+                <Hero 
+                    HeroImageCollection={HeroSourceTitle}
+                    Title={mainHeading}
+                    subTitle={subHeading}
+                />
             </div>
             <Feature />
         </section>
@@ -36,4 +41,9 @@ function HeroDefault() {
   )
 }
 
+HeroDefault.prototype = {
+    HeroSourceTitle: PropType.string.isRequired,
+    mainHeading:  PropType.string.isRequired,
+    subHeading: PropType.string.isRequired,
+  }
 export default HeroDefault

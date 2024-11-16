@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
 import CommonTitle from './CommonTitle'
 import SampleData from './SampleData'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 function CategoryData() {
-    const [isChecked, setIsChecked] = useState(false);
-    const handelChange = (name) => {
-        setIsChecked(true);
-        const navTitle = document.getElementById('navProductPage');
-        if(navTitle){
-            // navTitle.innerText = name;
-        }
+    const location = useLocation();
+    const navigate = useNavigate();
+    const [isChecked, setIsChecked] = useState(location.pathname);
+
+    const handelChange = (item) => {
+        setIsChecked(item.pathURL);
+        navigate(`${item.pathURL}`)
     }
 
   return (
@@ -35,8 +36,8 @@ function CategoryData() {
                                 value={item.CategoryName}
                                 id={item.ID}
                                 className={`max-h-5 min-w-5 cursor-pointer`}
-                                onChange={()=>{handelChange(item.CategoryName)}}
-                                checked={ ''|| item.isDataChecked ||isChecked }
+                                onChange={()=>{handelChange(item)}}
+                                checked={isChecked === item.pathURL }
                             />
                             <label 
                                 className={`text-sm font-normal tracking-normal leading-6 align-top text-left text-Gray90 cursor-pointer`}>
