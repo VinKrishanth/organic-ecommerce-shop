@@ -1,13 +1,13 @@
 import React from 'react'
 import Header from '../../Containers/Header'
 import Footer from '../../Containers/Footer'
-import Fruits from '../../Features/Categories/Fruit/Fruits'
+import VegetablesX from '../../Features/Categories/Vegetable/Vegetables'
 
 function Vegetables() {
   return (
     <>
       <Header />
-      <Fruits />
+      <VegetablesX />
       <Footer />
     </>
   )

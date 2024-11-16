@@ -1,9 +1,9 @@
 import React from 'react'
 import IconButton from '../Button/IconButton'
 import {ArrowRightGreen} from '../../assets/Product/Blog/BlogItems.js'
-function MainTitle({titleCenter, Title}) {
+function MainTitle({titleCenter, Title, addStyle}) {
   return (
-    <div className={`flex ${titleCenter? 'justify-center' : 'justify-between'} items-center xl:py-8 sm:py-6 py-4`}>
+    <div className={`flex ${titleCenter? 'justify-center' : 'justify-between'} items-center xl:py-8 sm:py-6 py-4 ${addStyle}`}>
 
         {
           titleCenter ? (

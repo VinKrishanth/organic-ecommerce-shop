@@ -1,7 +1,7 @@
 import React, {  useEffect, useState } from 'react'
 import MainTitle from '../../../Components/Title/MainTitle';
 import  ProductItems from './Components/ProductItems.js'
-import ProductCard from '../../../Components/Cards/Product/ProductCard.js'
+import ProductCard from '../../../Components/Cards/Product/ProductCard'
 
 function Products() {
     const [deviceSize, setDeviceSize] = useState(window.innerWidth <= 768);
