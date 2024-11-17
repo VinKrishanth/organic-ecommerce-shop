@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
 import PropType from 'prop-types'
+import { useLocation } from 'react-router-dom'
 
-function SideItem({ID, sourceMainURL, sourceHoverURL, Title, onClick}) {
+function SideItem({ID, sourceMainURL, sourceHoverURL, Title, onClick, SourceSRC}) {
   const [textHover, setTextHover]  = useState(false);
+  const location = useLocation();
+  const currentNavigation = location.pathname === SourceSRC;
 
   return (
     <li 
       key={ID}
       id={ID}
-      className={`flex justify-start items-center min-h-14 min-w-full gap-4 p-4 text-Gray90 bg-white hover:text-white hover:bg-Primary transition-all duration-400 ease-linear cursor-pointer`}
+      className={`flex justify-start items-center min-h-14 min-w-full gap-4 p-4  ${currentNavigation ? 'bg-[#333] text-white ' : 'text-Gray90 bg-white hover:text-white hover:bg-Primary'}  transition-all duration-400 ease-linear cursor-pointer`}
       onMouseOver={() => {setTextHover(true)}}
       onMouseOut={() => {setTextHover(false)}}
       onClick={onClick}

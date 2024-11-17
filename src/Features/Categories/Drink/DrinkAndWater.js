@@ -36,10 +36,10 @@ function DrinkAndWater() {
       </div>
       <div  className={`${customerStyle.container} ${customerStyle.dxl} ${customerStyle.xl} ${customerStyle.lg} ${customerStyle.md} ${customerStyle.sm} ${customerStyle.base}`}>
         <div className={`flex flex-col justify-start items-start min-w-full`}>
-          <MainTitle 
+          {/* <MainTitle 
             Title={`Popular Products`}
             addStyle={`min-w-full`}
-          />
+          /> */}
           <div className={`grid 2xl:grid-cols-5 xl:grid-cols-4  lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 md:gap-0 gap-8 min-w-full`}>
             {/* {
               IceCreamsDB.map((item, index)=> {

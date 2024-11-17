@@ -1,9 +1,9 @@
-import React, {useEffect, useState } from 'react'
+import React, {useEffect, useState } from 'react';
 import HeroDefault from '../../Home/Hero/HeroDefault';
-import HeroSource from '../IceCream/Components/HeroSource.js';
 import MoreProductLikeThis from '../../../Containers/MoreProductLikeThis.js';
 import MainTitle from '../../../Components/Title/MainTitle.js';
-import VegetableDB from './Components/VegetableDB.js'
+import VegetableDB from './Components/VegetableDB.js';
+import VegetableHeroSource from './Components/VegetableHeroSource.js'
 
 function Vegetables() {
   const [deviceSize, setDeviceSize] = useState(window.innerWidth <= 768);
@@ -28,17 +28,17 @@ function Vegetables() {
     <div className={`flex flex-col justify-start items-start min-w-full`}>
       <div className={`flex justify-start items-start min-w-full`}>
         <HeroDefault 
-          HeroSourceTitle={HeroSource} 
+          HeroSourceTitle={VegetableHeroSource} 
           mainHeading={`Fresh & Healthy Organic Food`} 
           subHeading={`30%`}
         />
       </div>
       <div  className={`${customerStyle.container} ${customerStyle.dxl} ${customerStyle.xl} ${customerStyle.lg} ${customerStyle.md} ${customerStyle.sm} ${customerStyle.base}`}>
         <div className={`flex flex-col justify-start items-start min-w-full`}>
-          <MainTitle 
+          {/* <MainTitle 
             Title={`Popular Products`}
             addStyle={`min-w-full`}
-          />
+          /> */}
           <div className={`grid 2xl:grid-cols-5 xl:grid-cols-4  lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 md:gap-0 gap-8 min-w-full`}>
             {/* {
               IceCreamsDB.map((item, index)=> {

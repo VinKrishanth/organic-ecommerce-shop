@@ -22,6 +22,7 @@ function SideBars() {
                   Title={item.SourceTitle}
                   key={index}
                   onClick = {()=> {handleClick(item.SourceSRC)}}
+                  SourceSRC= {item.SourceSRC}
                 />
             )
           })
