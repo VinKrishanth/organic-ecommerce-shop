@@ -7,13 +7,13 @@ import Login from '../../Features/Login/Login'
 function SignIn() {
     return (
         <>
-          <Header />
+          {/* <Header />
           <NavigationMenu 
             pageName={'Login'}
             subNav={'Account'}
-          />
+          /> */}
           <Login />
-          <Footer />
+          {/* <Footer /> */}
         </>
     )
 }

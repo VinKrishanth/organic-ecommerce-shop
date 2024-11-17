@@ -7,13 +7,13 @@ import Register from '../../Features/Login/Register'
 function SignUp() {
     return (
         <>
-          <Header />
+          {/* <Header />
           <NavigationMenu 
             pageName={'Create Account'}
             subNav={'Account'}
-          />
+          /> */}
           <Register  />
-          <Footer />
+          {/* <Footer /> */}
         </>
       )
     }

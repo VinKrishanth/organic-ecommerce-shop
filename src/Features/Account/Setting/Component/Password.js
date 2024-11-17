@@ -9,7 +9,9 @@ function Password() {
         newPassword: '',
         confirmPassword: '',
       });
-    const [dataType, setDataType] = useState(false);
+
+      const [dataType, setDataType] = useState(false);
+      
       const inputDataChange = (event) => {
           const {name, value} = event.target;
           setFormData({
@@ -17,6 +19,7 @@ function Password() {
             [name] : value
           });
       }
+
       const handleSubmit = (event) => {
         event.preventDefault();
         console.log(`form data`, formData);

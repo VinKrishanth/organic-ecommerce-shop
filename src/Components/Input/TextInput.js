@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function TextInput({onChange, placeholder, value , type, validationText, SourceURL, SourceAlr, label ,name,  onMouseOver, onMouseOut, inputStyle, readOnly}) {
+function TextInput({onChange, placeholder, value , type, validationText, SourceURL, SourceAlr, label ,name,  onMouseOver, onMouseOut, inputStyle, readOnly, eyeIcon}) {
   const [textHover, setTextHover] = useState();
   return (
     <div className='flex flex-col gap-1 min-w-full relative'>
@@ -12,13 +12,13 @@ function TextInput({onChange, placeholder, value , type, validationText, SourceU
             )
         }
         <input 
-        
             name={name}
             type={name === onMouseOver ? onMouseOver : type}
             placeholder={placeholder}
             onChange={onChange}
             value={value}
-            className={` ${inputStyle ? inputStyle : 'border-2 pl-4 min-h-[49px]'} min-w-full  text-base leading-5 tracking-normal align-top font-normal placeholder-Gray40 focus:outline-none rounded-lg ${textHover && validationText} focus:border-Primary`}
+            className={` ${inputStyle ? inputStyle : 'border-2 pl-4 min-h-[49px]'} min-w-full  text-base leading-5 tracking-normal align-top font-normal placeholder-Gray40 focus:outline-none rounded-lg ${textHover && validationText} focus:border-Primary `}
+            autoComplete='false'
             onMouseOver={()=>setTextHover(true)}
             onMouseOut={()=>setTextHover(false)}
             readOnly={readOnly}
@@ -26,7 +26,7 @@ function TextInput({onChange, placeholder, value , type, validationText, SourceU
         {
             SourceURL && (
                 <figure 
-                    className={`absolute right-0 top-6 flex justify-center items-center p-4 scale-125 cursor-pointer `}
+                    className={`absolute right-0 ${eyeIcon  ? 'top-0' : 'top-6'}  flex justify-center items-center p-4 scale-125 cursor-pointer `}
                     onMouseOver={onMouseOver}
                     onMouseOut={onMouseOut}
                 >
