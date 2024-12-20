@@ -7,6 +7,13 @@
 
 # testing
 /coverage
+/src/api
+/src/components
+/src/Containers
+/src/Features
+/src/Pages
+/src/reducer
+/src/store
 
 # production
 /build
