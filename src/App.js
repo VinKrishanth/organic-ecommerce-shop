@@ -1,6 +1,6 @@
 import React from 'react'
 import Layouts from "./Layouts/Layouts";
-import Login from './Pages/Auth/Login';
+import SignIn from './Pages/Auth/SignUp';
 import { useSelector } from 'react-redux';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      {!isLoggedIn && <Login /> }
+      {!isLoggedIn && <SignIn /> }
       {isLoggedIn &&  <Layouts /> }
     </>
   );

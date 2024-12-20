@@ -55,7 +55,7 @@ const Navigation = [
         sourceHover: logoutHover,
         sourceAlt: 'The Navigation Log-out icon',
         NavigationName: 'Log-out',
-        NavigationURL: `/organic-ecommerce-shop/login`,
+        NavigationURL: `/organic-ecommerce-shop/my-account/sign-in`,
     },
 ]
 

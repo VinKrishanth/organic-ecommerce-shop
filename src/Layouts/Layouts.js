@@ -21,7 +21,7 @@ function Layouts() {
         <Route path="/organic-ecommerce-shop/about" element={<About />} />
         <Route path="/organic-ecommerce-shop/contact" element={<Contact />} />
         <Route path="/organic-ecommerce-shop/product" element={<Product />} />
-        <Route path="/organic-ecommerce-shop/login" element={<Login />} />
+        {/* <Route path="/organic-ecommerce-shop/login" element={<Login />} /> */}
 
         
         <Route path="/organic-ecommerce-shop/categories/fresh-fruit" element={<Fruit />} />

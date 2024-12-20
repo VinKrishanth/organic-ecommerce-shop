@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function TextInput({onChange, placeholder, value , type, validationText, SourceURL, SourceAlr, label ,name,  onMouseOver, onMouseOut, inputStyle, readOnly, eyeIcon}) {
+function TextInput({onChange, placeholder, value , type, validationText, SourceURL, SourceAlr, label ,name,  onMouseOver, onMouseOut, inputStyle, readOnly, eyeIcon,onClick}) {
   const [textHover, setTextHover] = useState();
   return (
     <div className='flex flex-col gap-1 min-w-full relative'>
@@ -29,6 +29,7 @@ function TextInput({onChange, placeholder, value , type, validationText, SourceU
                     className={`absolute right-0 ${eyeIcon  ? 'top-0' : 'top-6'}  flex justify-center items-center p-4 scale-125 cursor-pointer `}
                     onMouseOver={onMouseOver}
                     onMouseOut={onMouseOut}
+                    onClick={onClick}
                 >
                     <img src={SourceURL} alt={SourceAlr} className={'object-contain object-center min-w-5 min-h-5'} />
                 </figure>

@@ -2,6 +2,8 @@ import React, {useEffect, useState } from 'react'
 import TextInput from '../../Components/Input/TextInput'   ;
 import { eyeOpen } from '../../assets/Dashboard';
 import { useNavigate } from 'react-router-dom';
+import Logo from '../../Components/Navigation/logo/Logo'
+
 
 function Register() {
   const navigate = useNavigate();
@@ -14,14 +16,14 @@ function Register() {
   }, [deviceSize]); 
 
   const customerStyle = {
-      container: 'pb-32  pt-16',
-      dxl: '2xl:px-16 ',
-      xl: '',
-      lg: 'lg:min-w-screen ',
-      md: '',
-      sm:' sm:px-16  ',
-      base: 'min-w-full '
-  }
+    container: 'pb-32  sm:pt-16',
+    dxl: '2xl:px-16 ',
+    xl: '',
+    lg: 'lg:min-w-screen ',
+    md: '',
+    sm:' sm:px-16  min-w-full',
+    base: 'min-w-[80%] px-8 pt-4'
+}
   const [formData, setFormData]= useState({
     email: '',
     password: '',
@@ -43,7 +45,8 @@ function Register() {
       email: '',
       password: '',
       confirmPassword: '',
-    })
+    });
+    navigate(`/organic-ecommerce-shop/my-account/sign-in`);
   }
   const handleLogin = () => {
     navigate(`/organic-ecommerce-shop/my-account/sign-in`);
@@ -54,14 +57,17 @@ function Register() {
 
   return (
     <div  className={`${customerStyle.container} ${customerStyle.dxl} ${customerStyle.xl} ${customerStyle.lg} ${customerStyle.md} ${customerStyle.sm} ${customerStyle.base}`}>
+      <div className={`flex justify-start items-start cursor-pointer sm:hover:scale-110 sm:hover:translate-x-16 hover:translate-x-0  transition-all duration-700 ease-linear delay-100 sm:scale-100 scale-75 sm:translate-x-10 -translate-x-10`}>
+        <Logo  />
+      </div> 
       <div className={`flex justify-center items-start min-w-full min-h-[50vh]`}>
-        <div className={`flex flex-col justify-start items-center min-w-[520px] border-2 min-h-[450px] p-16 gap-8`}>
+        <div className={`flex flex-col justify-start items-center min-w-[520px] sm:border-2 border-t-2  min-h-[450px] p-16 gap-8`}>
             <h1 className={`text-[32px] text-left align-top tracking-wide leading-6 font-semibold cursor-pointer capitalize pb-4`}>
               Create Account
             </h1>
             <form 
               onSubmit={handleSubmit}
-              className={`flex flex-col justify-start items-start min-w-full min-h-44 gap-4`}
+              className={`flex flex-col sm:justify-start justify-center items-start min-w-full  min-h-44 sm:gap-4 gap-8 sm:px-0 px-8`}
             >
               <div className={`flex justify-start items-center min-w-full`}>
                 <TextInput 
@@ -121,24 +127,52 @@ function Register() {
                     </label>
                   </div>
               </div>
-              <button 
-                type='submit'
-                className={`flex justify-center items-center text-white bg-Primary min-w-full min-h-11 rounded-l-full rounded-r-full m-0 mt-4`}
-              >
-                Create Account
-              </button>
+              {
+                deviceSize ? (
+                  <div className='flex flex-col gap-2 justify-center items-center min-w-full'>
+                    <button 
+                      type='submit'
+                      className={`flex justify-center items-center text-white bg-Primary min-w-full   min-h-11 rounded-l-full rounded-r-full m-0 sm:mt-4 `}
+                    >
+                      Create Account
+                    </button>
 
-              <div className={`flex justify-center items-center min-w-full`}>
-                <p className={`text-sm font-normal align-top tracking-normal leading-6 cursor-pointer text-Gray60`}>
-                  Already have account
-                </p>
-                <p 
-                  onClick={handleLogin}
-                  className={`text-sm  align-top tracking-normal leading-6 cursor-pointer text-Gray90 font-medium pl-2`}
-                > 
-                  Login
-                </p>
-              </div>
+                    <div className={`flex justify-center items-center min-w-full`}>
+                      <p className={`text-sm font-normal align-top tracking-normal leading-6 cursor-pointer text-Gray60`}>
+                        Already have account
+                      </p>
+                      <p 
+                        onClick={handleLogin}
+                        className={`text-sm  align-top tracking-normal leading-6 cursor-pointer text-Gray90 font-medium pl-2`}
+                      > 
+                        Login
+                      </p>
+                    </div>
+                  </div>
+                ) : (
+                  <>
+                  <button 
+                    type='submit'
+                    className={`flex justify-center items-center text-white bg-Primary min-w-full   min-h-11 rounded-l-full rounded-r-full m-0 sm:mt-4 `}
+                  >
+                    Create Account
+                  </button>
+
+                  <div className={`flex justify-center items-center min-w-full`}>
+                    <p className={`text-sm font-normal align-top tracking-normal leading-6 cursor-pointer text-Gray60`}>
+                      Already have account
+                    </p>
+                    <p 
+                      onClick={handleLogin}
+                      className={`text-sm  align-top tracking-normal leading-6 cursor-pointer text-Gray90 font-medium pl-2`}
+                    > 
+                      Login
+                    </p>
+                  </div>
+                  </>
+                )
+              }
+              
             </form>
             
         </div>
